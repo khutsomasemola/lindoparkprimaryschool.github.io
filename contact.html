@@ -1,0 +1,4220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Laerskool LindoPark</title>
+
+    <meta
+        name="description"
+        content="Contact Laerskool LindoPark Primary in Pretoria. Find our address, telephone number, email address, school hours and Google Maps location."
+    >
+
+    <!-- =========================================================
+         FONTS
+    ========================================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         GLOBAL CSS
+    ========================================================= -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+
+        /* =========================================================
+           CONTACT PAGE VARIABLES
+        ========================================================= */
+
+        :root {
+            --contact-navy: #102b49;
+            --contact-blue: #1f5595;
+            --contact-red: #9d3037;
+            --contact-gold: #d3ad4c;
+            --contact-cream: #f8f8f6;
+            --contact-white: #ffffff;
+            --contact-black: #101820;
+            --contact-grey: #66717d;
+            --contact-line: rgba(16, 43, 73, 0.14);
+        }
+
+
+        /* =========================================================
+           SCROLL SAFETY
+        ========================================================= */
+
+        html {
+            width: 100%;
+            min-height: 100%;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+
+            position: relative;
+        }
+
+        body.menu-open {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            position: relative !important;
+        }
+
+
+        /* =========================================================
+           MOBILE OVERLAY
+        ========================================================= */
+
+        .mobile-overlay {
+            position: fixed !important;
+            inset: 0 !important;
+
+            z-index: 9997 !important;
+
+            background: rgba(5, 18, 31, 0.55);
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+
+        /* =========================================================
+           MOBILE SIDEBAR
+        ========================================================= */
+
+        .mobile-sidebar {
+            position: fixed !important;
+
+            top: 0 !important;
+            right: 0 !important;
+
+            width: min(390px, 88vw) !important;
+
+            height: 100vh !important;
+            height: 100dvh !important;
+
+            z-index: 9998 !important;
+
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+
+            -webkit-overflow-scrolling: touch;
+
+            background: #ffffff;
+
+            transform: translateX(105%);
+
+            visibility: hidden;
+
+            transition:
+                transform 0.35s cubic-bezier(.77,0,.18,1),
+                visibility 0.35s ease;
+        }
+
+        .mobile-sidebar.active {
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .contact-hero {
+            min-height: 72vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7, 24, 42, 0.88),
+                    rgba(7, 24, 42, 0.55),
+                    rgba(7, 24, 42, 0.18)
+                ),
+                url("assets/hero-3.jpg")
+                center center /
+                cover
+                no-repeat;
+        }
+
+        .contact-hero::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 45%;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.55),
+                    transparent
+                );
+
+            pointer-events: none;
+        }
+
+        .contact-hero-inner {
+            width: min(1180px, calc(100% - 48px));
+
+            margin: 0 auto;
+
+            padding: 160px 0 85px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .contact-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 22px;
+
+            color: #ffffff;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 0.72rem;
+            font-weight: 800;
+
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .contact-eyebrow::before {
+            content: "";
+
+            width: 38px;
+            height: 2px;
+
+            background: var(--contact-gold);
+        }
+
+        .contact-hero h1 {
+            max-width: 800px;
+
+            margin: 0 0 22px;
+
+            color: #ffffff;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(3rem, 7vw, 6.5rem);
+
+            font-weight: 800;
+
+            line-height: 0.96;
+
+            letter-spacing: -0.055em;
+        }
+
+        .contact-hero p {
+            max-width: 650px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,0.88);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 1.08rem;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           QUICK CONTACT
+        ========================================================= */
+
+        .contact-quick {
+            position: relative;
+
+            z-index: 5;
+
+            margin-top: -42px;
+        }
+
+        .contact-quick-grid {
+            width: min(1180px, calc(100% - 48px));
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 70px rgba(16,43,73,0.14);
+        }
+
+        .quick-item {
+            min-height: 125px;
+
+            padding: 28px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            border-right:
+                1px solid var(--contact-line);
+        }
+
+        .quick-item:last-child {
+            border-right: 0;
+        }
+
+        .quick-icon {
+            flex: 0 0 48px;
+
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(31,85,149,0.08);
+
+            color:
+                var(--contact-blue);
+        }
+
+        .quick-item:nth-child(2)
+        .quick-icon {
+            background:
+                rgba(157,48,55,0.08);
+
+            color:
+                var(--contact-red);
+        }
+
+        .quick-item:nth-child(3)
+        .quick-icon {
+            background:
+                rgba(211,173,76,0.14);
+
+            color:
+                #94751e;
+        }
+
+        .quick-item span {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: var(--contact-grey);
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 0.68rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+        }
+
+        .quick-item strong {
+            display: block;
+
+            color: var(--contact-navy);
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        .contact-section {
+            padding: 115px 0;
+        }
+
+        .contact-container {
+            width: min(1180px, calc(100% - 48px));
+
+            margin: 0 auto;
+        }
+
+        .contact-section-label {
+            margin-bottom: 15px;
+
+            color: var(--contact-blue);
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 0.7rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+        }
+
+        .contact-heading {
+            max-width: 720px;
+
+            margin: 0 0 22px;
+
+            color: var(--contact-navy);
+
+            font-family: "Manrope", sans-serif;
+
+            font-size:
+                clamp(2.2rem, 5vw, 4.3rem);
+
+            font-weight: 800;
+
+            line-height: 1.04;
+
+            letter-spacing: -0.045em;
+        }
+
+        .contact-lead {
+            max-width: 680px;
+
+            margin: 0;
+
+            color: var(--contact-grey);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 1.02rem;
+
+            line-height: 1.85;
+        }
+
+
+        /* =========================================================
+           CONTACT METHODS
+        ========================================================= */
+
+        .contact-methods-section {
+            padding-top: 20px;
+
+            background:
+                var(--contact-cream);
+        }
+
+        .contact-methods-header {
+            margin-bottom: 48px;
+        }
+
+        .contact-methods-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .contact-method {
+            position: relative;
+
+            min-height: 300px;
+
+            padding: 38px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            background: #ffffff;
+
+            border:
+                1px solid var(--contact-line);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .contact-method::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background:
+                var(--contact-blue);
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                left;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .contact-method:nth-child(2)::after {
+            background:
+                var(--contact-red);
+        }
+
+        .contact-method:nth-child(3)::after {
+            background:
+                var(--contact-gold);
+        }
+
+        .contact-method:hover {
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 22px 55px
+                rgba(16,43,73,0.11);
+        }
+
+        .contact-method:hover::after {
+            transform:
+                scaleX(1);
+        }
+
+        .method-icon {
+            width: 55px;
+            height: 55px;
+
+            margin-bottom: 30px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(31,85,149,0.08);
+
+            color:
+                var(--contact-blue);
+
+            font-size: 1.15rem;
+        }
+
+        .contact-method:nth-child(2)
+        .method-icon {
+            background:
+                rgba(157,48,55,0.08);
+
+            color:
+                var(--contact-red);
+        }
+
+        .contact-method:nth-child(3)
+        .method-icon {
+            background:
+                rgba(211,173,76,0.14);
+
+            color:
+                #94751e;
+        }
+
+        .contact-method h3 {
+            margin: 0 0 10px;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 1.35rem;
+
+            font-weight: 800;
+        }
+
+        .contact-method p {
+            margin: 0;
+
+            color:
+                var(--contact-grey);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            line-height: 1.7;
+        }
+
+        .method-action {
+            margin-top: auto;
+
+            padding-top: 25px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            border: 0;
+
+            background: transparent;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 0.74rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .method-action i {
+            transition:
+                transform 0.2s ease;
+        }
+
+        .contact-method:hover
+        .method-action i {
+            transform:
+                translateX(5px);
+        }
+
+
+        /* =========================================================
+           REAL CONTACT DETAILS
+        ========================================================= */
+
+        .real-contact-section {
+            background:
+                #ffffff;
+        }
+
+        .real-contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 22px;
+        }
+
+        .real-contact-card {
+            padding: 34px;
+
+            border:
+                1px solid var(--contact-line);
+
+            border-radius: 18px;
+
+            background:
+                var(--contact-cream);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .real-contact-card:hover {
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 18px 45px
+                rgba(16,43,73,0.08);
+        }
+
+        .real-contact-card.wide {
+            grid-column:
+                1 / -1;
+        }
+
+        .real-contact-card-icon {
+            width: 48px;
+            height: 48px;
+
+            margin-bottom: 22px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                #ffffff;
+
+            color:
+                var(--contact-blue);
+        }
+
+        .real-contact-card h3 {
+            margin: 0 0 8px;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 1.15rem;
+
+            font-weight: 800;
+        }
+
+        .real-contact-card p {
+            margin: 0;
+
+            color:
+                var(--contact-grey);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            line-height: 1.7;
+        }
+
+        .real-contact-card a {
+            color:
+                var(--contact-blue);
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .real-contact-card a:hover {
+            text-decoration:
+                underline;
+        }
+
+
+        /* =========================================================
+           ENQUIRY
+        ========================================================= */
+
+        .enquiry-section {
+            background:
+                var(--contact-cream);
+        }
+
+        .enquiry-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 85px;
+
+            align-items: start;
+        }
+
+        .enquiry-copy {
+            position: sticky;
+
+            top: 110px;
+        }
+
+        .enquiry-copy h2 {
+            max-width: 500px;
+
+            margin: 0 0 22px;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                clamp(2.2rem,4vw,3.8rem);
+
+            line-height: 1.05;
+
+            letter-spacing:
+                -0.045em;
+        }
+
+        .enquiry-copy > p {
+            max-width: 480px;
+
+            margin: 0 0 30px;
+
+            color:
+                var(--contact-grey);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           FORM
+        ========================================================= */
+
+        .contact-form {
+            padding: 42px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid var(--contact-line);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 60px
+                rgba(16,43,73,0.07);
+        }
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group.full {
+            grid-column:
+                1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 0.76rem;
+
+            font-weight: 800;
+
+            letter-spacing:
+                0.04em;
+        }
+
+        .form-group label span {
+            color:
+                var(--contact-red);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 14px 15px;
+
+            border:
+                1px solid
+                rgba(16,43,73,0.18);
+
+            border-radius: 9px;
+
+            outline: none;
+
+            background:
+                #ffffff;
+
+            color:
+                var(--contact-black);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            font-size: 0.94rem;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color:
+                var(--contact-blue);
+
+            box-shadow:
+                0 0 0 4px
+                rgba(31,85,149,0.08);
+        }
+
+        .form-group input.invalid,
+        .form-group select.invalid,
+        .form-group textarea.invalid {
+            border-color:
+                var(--contact-red);
+        }
+
+        .field-error {
+            display: none;
+
+            margin-top: 6px;
+
+            color:
+                var(--contact-red);
+
+            font-size: 0.76rem;
+        }
+
+        .field-error.show {
+            display: block;
+        }
+
+        .contact-options {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .contact-option {
+            position: relative;
+        }
+
+        .contact-option input {
+            position: absolute;
+
+            opacity: 0;
+
+            pointer-events: none;
+        }
+
+        .contact-option label {
+            display: inline-flex !important;
+
+            align-items: center;
+
+            margin: 0 !important;
+
+            padding: 10px 14px;
+
+            border:
+                1px solid var(--contact-line);
+
+            border-radius: 30px;
+
+            color:
+                var(--contact-grey) !important;
+
+            font-size:
+                0.76rem !important;
+
+            letter-spacing:
+                0 !important;
+
+            cursor: pointer;
+        }
+
+        .contact-option input:checked
+        + label {
+            background:
+                var(--contact-navy);
+
+            border-color:
+                var(--contact-navy);
+
+            color:
+                #ffffff !important;
+        }
+
+        .consent {
+            display: flex;
+
+            align-items:
+                flex-start;
+
+            gap: 10px;
+
+            margin: 4px 0 25px;
+        }
+
+        .consent input {
+            width: 17px;
+            height: 17px;
+
+            margin-top: 2px;
+
+            accent-color:
+                var(--contact-blue);
+        }
+
+        .consent label {
+            margin: 0 !important;
+
+            color:
+                var(--contact-grey) !important;
+
+            font-family:
+                "DM Sans", sans-serif !important;
+
+            font-size:
+                0.78rem !important;
+
+            font-weight:
+                400 !important;
+
+            letter-spacing:
+                0 !important;
+
+            line-height:
+                1.55;
+        }
+
+        .form-submit {
+            width: 100%;
+
+            padding: 16px 22px;
+
+            border: 0;
+
+            border-radius: 8px;
+
+            background:
+                var(--contact-navy);
+
+            color:
+                #ffffff;
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                0.76rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.13em;
+
+            text-transform:
+                uppercase;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .form-submit:hover {
+            background:
+                var(--contact-blue);
+
+            transform:
+                translateY(-2px);
+        }
+
+        .form-submit i {
+            margin-left: 8px;
+        }
+
+        .form-success {
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            background:
+                #edf7ef;
+
+            border:
+                1px solid #b9d8bf;
+
+            color:
+                #276335;
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            font-size:
+                0.88rem;
+
+            line-height:
+                1.6;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+
+        /* =========================================================
+           LOCATION / MAP
+        ========================================================= */
+
+        .location-section {
+            background:
+                #ffffff;
+        }
+
+        .location-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.75fr 1.25fr;
+
+            gap: 50px;
+
+            align-items:
+                stretch;
+        }
+
+        .location-info {
+            display:
+                flex;
+
+            flex-direction:
+                column;
+        }
+
+        .location-info h2 {
+            margin: 0 0 18px;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                clamp(2rem,4vw,3.5rem);
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -0.04em;
+        }
+
+        .location-info > p {
+            margin: 0 0 32px;
+
+            color:
+                var(--contact-grey);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            line-height:
+                1.8;
+        }
+
+        .location-detail {
+            display:
+                flex;
+
+            gap: 16px;
+
+            padding: 19px 0;
+
+            border-bottom:
+                1px solid var(--contact-line);
+        }
+
+        .location-detail:first-of-type {
+            border-top:
+                1px solid var(--contact-line);
+        }
+
+        .location-detail-icon {
+            flex: 0 0 38px;
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--contact-cream);
+
+            color:
+                var(--contact-blue);
+
+            font-size:
+                0.86rem;
+        }
+
+        .location-detail strong {
+            display: block;
+
+            margin-bottom: 4px;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                0.84rem;
+
+            font-weight:
+                800;
+        }
+
+        .location-detail span {
+            color:
+                var(--contact-grey);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            font-size:
+                0.88rem;
+
+            line-height:
+                1.55;
+        }
+
+        .location-detail a {
+            color:
+                var(--contact-blue);
+
+            font-weight:
+                700;
+
+            text-decoration:
+                none;
+        }
+
+        .location-detail a:hover {
+            text-decoration:
+                underline;
+        }
+
+        .map-wrapper {
+            position:
+                relative;
+
+            min-height:
+                500px;
+
+            overflow:
+                hidden;
+
+            border-radius:
+                20px;
+
+            background:
+                #dfe4e8;
+
+            box-shadow:
+                0 20px 55px
+                rgba(16,43,73,0.12);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+
+            min-height:
+                500px;
+
+            display:
+                block;
+
+            border:
+                0;
+        }
+
+        .map-label {
+            position:
+                absolute;
+
+            top: 18px;
+            left: 18px;
+
+            z-index: 2;
+
+            padding:
+                10px 14px;
+
+            background:
+                rgba(255,255,255,0.94);
+
+            border-radius:
+                8px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(16,43,73,0.12);
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                0.68rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+        }
+
+        .directions-button {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap: 9px;
+
+            margin-top:
+                25px;
+
+            padding:
+                14px 20px;
+
+            width:
+                fit-content;
+
+            border-radius:
+                7px;
+
+            background:
+                var(--contact-navy);
+
+            color:
+                #ffffff;
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                0.73rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.1em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .directions-button:hover {
+            background:
+                var(--contact-blue);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================================================
+           FAQ
+        ========================================================= */
+
+        .faq-section {
+            background:
+                var(--contact-cream);
+        }
+
+        .faq-header {
+            max-width:
+                680px;
+
+            margin-bottom:
+                50px;
+        }
+
+        .faq-list {
+            max-width:
+                900px;
+        }
+
+        .faq-item {
+            border-top:
+                1px solid var(--contact-line);
+        }
+
+        .faq-item:last-child {
+            border-bottom:
+                1px solid var(--contact-line);
+        }
+
+        .faq-question {
+            width:
+                100%;
+
+            padding:
+                24px 0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            background:
+                transparent;
+
+            border:
+                0;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                1rem;
+
+            font-weight:
+                800;
+
+            text-align:
+                left;
+
+            cursor:
+                pointer;
+        }
+
+        .faq-question i {
+            flex:
+                0 0 auto;
+
+            font-size:
+                0.8rem;
+
+            transition:
+                transform 0.25s ease;
+        }
+
+        .faq-item.active
+        .faq-question i {
+            transform:
+                rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height:
+                0;
+
+            overflow:
+                hidden;
+
+            transition:
+                max-height 0.35s ease;
+        }
+
+        .faq-answer-inner {
+            padding:
+                0 40px 25px 0;
+
+            color:
+                var(--contact-grey);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            font-size:
+                0.92rem;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .contact-cta {
+            position:
+                relative;
+
+            padding:
+                100px 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    var(--contact-navy),
+                    #183f69
+                );
+
+            overflow:
+                hidden;
+        }
+
+        .contact-cta::before {
+            content: "";
+
+            position:
+                absolute;
+
+            width:
+                420px;
+
+            height:
+                420px;
+
+            right:
+                -150px;
+
+            top:
+                -220px;
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+
+            border-radius:
+                50%;
+        }
+
+        .contact-cta::after {
+            content: "";
+
+            position:
+                absolute;
+
+            width:
+                250px;
+
+            height:
+                250px;
+
+            left:
+                -130px;
+
+            bottom:
+                -140px;
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            border-radius:
+                50%;
+        }
+
+        .cta-inner {
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            width:
+                min(900px, calc(100% - 48px));
+
+            margin:
+                0 auto;
+
+            text-align:
+                center;
+        }
+
+        .cta-inner span {
+            display:
+                block;
+
+            margin-bottom:
+                18px;
+
+            color:
+                var(--contact-gold);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                0.7rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.2em;
+
+            text-transform:
+                uppercase;
+        }
+
+        .cta-inner h2 {
+            margin:
+                0 0 20px;
+
+            color:
+                #ffffff;
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                clamp(2.3rem,5vw,4.5rem);
+
+            line-height:
+                1.03;
+
+            letter-spacing:
+                -0.045em;
+        }
+
+        .cta-inner p {
+            max-width:
+                620px;
+
+            margin:
+                0 auto 32px;
+
+            color:
+                rgba(255,255,255,0.74);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            line-height:
+                1.8;
+        }
+
+        .cta-button {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                15px 25px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.3);
+
+            border-radius:
+                7px;
+
+            background:
+                #ffffff;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                0.74rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.12em;
+
+            text-transform:
+                uppercase;
+
+            text-decoration:
+                none;
+
+            transition:
+                transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =========================================================
+           MODAL
+        ========================================================= */
+
+        .contact-modal {
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            z-index:
+                100000;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                20px;
+
+            background:
+                rgba(5,18,31,0.72);
+
+            opacity:
+                0;
+
+            visibility:
+                hidden;
+
+            pointer-events:
+                none;
+
+            transition:
+                opacity 0.25s ease,
+                visibility 0.25s ease;
+        }
+
+        .contact-modal.active {
+            opacity:
+                1;
+
+            visibility:
+                visible;
+
+            pointer-events:
+                auto;
+        }
+
+        .modal-box {
+            width:
+                min(480px,100%);
+
+            padding:
+                38px;
+
+            position:
+                relative;
+
+            background:
+                #ffffff;
+
+            border-radius:
+                18px;
+
+            box-shadow:
+                0 30px 90px
+                rgba(0,0,0,0.28);
+
+            transform:
+                translateY(20px);
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .contact-modal.active
+        .modal-box {
+            transform:
+                translateY(0);
+        }
+
+        .modal-close {
+            position:
+                absolute;
+
+            top:
+                17px;
+
+            right:
+                17px;
+
+            width:
+                36px;
+
+            height:
+                36px;
+
+            border:
+                0;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--contact-cream);
+
+            color:
+                var(--contact-navy);
+
+            cursor:
+                pointer;
+        }
+
+        .modal-icon {
+            width:
+                55px;
+
+            height:
+                55px;
+
+            margin-bottom:
+                20px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(31,85,149,0.08);
+
+            color:
+                var(--contact-blue);
+        }
+
+        .modal-box h3 {
+            margin:
+                0 0 12px;
+
+            color:
+                var(--contact-navy);
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size:
+                1.55rem;
+        }
+
+        .modal-box p {
+            margin:
+                0;
+
+            color:
+                var(--contact-grey);
+
+            font-family:
+                "DM Sans", sans-serif;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        .back-to-top {
+            position:
+                fixed;
+
+            right:
+                25px;
+
+            bottom:
+                25px;
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            background:
+                transparent;
+
+            border:
+                none;
+
+            outline:
+                none;
+
+            color:
+                #111;
+
+            font-size:
+                32px;
+
+            font-weight:
+                300;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            cursor:
+                pointer;
+
+            opacity:
+                0;
+
+            visibility:
+                hidden;
+
+            transform:
+                translateY(15px);
+
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease,
+                transform 0.3s ease,
+                color 0.3s ease;
+
+            z-index:
+                99999;
+        }
+
+        .back-to-top.show {
+            opacity:
+                1;
+
+            visibility:
+                visible;
+
+            transform:
+                translateY(0);
+        }
+
+        .back-to-top:hover {
+            color:
+                #777;
+
+            transform:
+                translateY(-5px);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 980px) {
+
+            .contact-hero {
+                min-height:
+                    65vh;
+            }
+
+            .contact-methods-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .contact-method {
+                min-height:
+                    auto;
+            }
+
+            .real-contact-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .real-contact-card.wide {
+                grid-column:
+                    auto;
+            }
+
+            .enquiry-grid {
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    50px;
+            }
+
+            .enquiry-copy {
+                position:
+                    static;
+            }
+
+            .location-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .contact-hero-inner {
+                width:
+                    calc(100% - 34px);
+
+                padding:
+                    145px 0 65px;
+            }
+
+            .contact-hero h1 {
+                font-size:
+                    clamp(2.8rem,14vw,4.7rem);
+            }
+
+            .contact-hero p {
+                font-size:
+                    0.96rem;
+            }
+
+            .contact-quick {
+                margin-top:
+                    -25px;
+            }
+
+            .contact-quick-grid {
+                width:
+                    calc(100% - 34px);
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .quick-item {
+                min-height:
+                    auto;
+
+                padding:
+                    22px;
+
+                border-right:
+                    0;
+
+                border-bottom:
+                    1px solid var(--contact-line);
+            }
+
+            .quick-item:last-child {
+                border-bottom:
+                    0;
+            }
+
+            .contact-section {
+                padding:
+                    75px 0;
+            }
+
+            .contact-container {
+                width:
+                    calc(100% - 34px);
+            }
+
+            .contact-heading {
+                font-size:
+                    2.5rem;
+            }
+
+            .contact-form {
+                padding:
+                    25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    0;
+            }
+
+            .form-group.full {
+                grid-column:
+                    auto;
+            }
+
+            .map-wrapper {
+                min-height:
+                    360px;
+
+                border-radius:
+                    15px;
+            }
+
+            .map-wrapper iframe {
+                min-height:
+                    360px;
+            }
+
+            .contact-cta {
+                padding:
+                    75px 0;
+            }
+
+            .cta-inner {
+                width:
+                    calc(100% - 34px);
+            }
+
+            .back-to-top {
+                right:
+                    15px;
+
+                bottom:
+                    18px;
+
+                font-size:
+                    28px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .contact-hero {
+                min-height:
+                    68vh;
+            }
+
+            .contact-eyebrow {
+                font-size:
+                    0.62rem;
+            }
+
+            .contact-hero h1 {
+                font-size:
+                    2.75rem;
+            }
+
+            .contact-method {
+                padding:
+                    28px;
+            }
+
+            .real-contact-card {
+                padding:
+                    27px;
+            }
+
+            .location-detail {
+                padding:
+                    16px 0;
+            }
+
+            .modal-box {
+                padding:
+                    30px 23px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="site-header">
+
+    <div class="nav-container">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Laerskool LindoPark logo"
+            >
+
+            <div class="brand-name">
+
+                <span>LAERSKOOL</span>
+
+                <strong>LINDOPARK</strong>
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a
+                href="sport-culture.html"
+                class="active"
+            >
+                Sport & Culture
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE SIDEBAR
+===================================================== -->
+
+<div
+    class="mobile-overlay"
+    id="mobileOverlay"
+></div>
+
+
+<aside
+    class="mobile-sidebar"
+    id="mobileSidebar"
+    aria-hidden="true"
+>
+
+    <div class="sidebar-header">
+
+        <a href="index.html">
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lindopark"
+            >
+
+        </a>
+
+        <button
+            class="sidebar-close"
+            id="sidebarClose"
+            aria-label="Close navigation"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="sidebar-links">
+
+        <a href="index.html">
+            <span>01</span>
+            Home
+        </a>
+
+        <a href="about.html">
+            <span>02</span>
+            About
+        </a>
+
+        <a href="academics.html">
+            <span>03</span>
+            Academics
+        </a>
+
+        <a
+            href="sport-culture.html"
+            class="active"
+        >
+            <span>04</span>
+            Sport & Culture
+        </a>
+
+        <a href="news.html">
+            <span>05</span>
+            News
+        </a>
+
+        <a href="admissions.html">
+            <span>06</span>
+            Admissions
+        </a>
+
+        <a href="contact.html">
+            <span>07</span>
+            Contact
+        </a>
+
+    </div>
+
+
+    <div class="sidebar-footer">
+
+        <span>
+            SAAM GROEI ONS
+        </span>
+
+        <strong>
+            OPWAARTS.
+        </strong>
+
+    </div>
+
+</aside>
+
+
+
+<main>
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <main>
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-inner">
+
+                <span class="contact-eyebrow">
+                    Kontak LindoPark
+                </span>
+
+                <h1>
+                    Let's stay<br>
+                    connected.
+                </h1>
+
+                <p>
+                    Whether you are a parent, learner, prospective
+                    family or member of our community, Laerskool
+                    LindoPark is here to help.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             QUICK CONTACT
+        ===================================================== -->
+
+        <section class="contact-quick">
+
+            <div class="contact-quick-grid">
+
+
+                <a
+                    href="tel:+27128001608"
+                    class="quick-item"
+                    style="text-decoration:none;"
+                >
+
+                    <div class="quick-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            School Office
+                        </span>
+
+                        <strong>
+                            012 800 1608
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="mailto:lindiesprimary@gmail.com"
+                    class="quick-item"
+                    style="text-decoration:none;"
+                >
+
+                    <div class="quick-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong>
+                            lindiesprimary@gmail.com
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#school-location"
+                    class="quick-item"
+                    style="text-decoration:none;"
+                >
+
+                    <div class="quick-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Visit Us
+                        </span>
+
+                        <strong>
+                            24 Carnation Street
+                        </strong>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRO
+        ===================================================== -->
+
+        <section class="contact-section">
+
+            <div class="contact-container">
+
+                <div class="contact-section-label">
+                    Get in touch
+                </div>
+
+                <h2 class="contact-heading">
+                    A school community built around connection.
+                </h2>
+
+                <p class="contact-lead">
+                    Good communication is an important part of a
+                    strong school community. Whether your enquiry
+                    concerns admissions, academics, sport, culture,
+                    school activities or general information, our
+                    contact details make it easy to reach LindoPark.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT METHODS
+        ===================================================== -->
+
+        <section class="contact-section contact-methods-section">
+
+            <div class="contact-container">
+
+                <div class="contact-methods-header">
+
+                    <div class="contact-section-label">
+                        Contact options
+                    </div>
+
+                    <h2 class="contact-heading">
+                        Reach the school directly.
+                    </h2>
+
+                </div>
+
+
+                <div class="contact-methods-grid">
+
+
+                    <!-- PHONE -->
+
+                    <article class="contact-method">
+
+                        <div class="method-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <h3>
+                            Call the School
+                        </h3>
+
+                        <p>
+                            Speak directly with the school office
+                            during the listed office hours.
+                        </p>
+
+                        <a
+                            href="tel:+27128001608"
+                            class="method-action"
+                            style="text-decoration:none;"
+                        >
+                            Call 012 800 1608
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <!-- EMAIL -->
+
+                    <article class="contact-method">
+
+                        <div class="method-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <h3>
+                            Send an Email
+                        </h3>
+
+                        <p>
+                            Send an enquiry directly to the school's
+                            published email address.
+                        </p>
+
+                        <a
+                            href="mailto:lindiesprimary@gmail.com"
+                            class="method-action"
+                            style="text-decoration:none;"
+                        >
+                            Email the School
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <!-- DIRECTIONS -->
+
+                    <article class="contact-method">
+
+                        <div class="method-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <h3>
+                            Find the School
+                        </h3>
+
+                        <p>
+                            View the interactive Google Map and
+                            explore the school's location in
+                            Lindopark, Pretoria.
+                        </p>
+
+                        <a
+                            href="#school-location"
+                            class="method-action"
+                            style="text-decoration:none;"
+                        >
+                            View Location
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VERIFIED CONTACT DETAILS
+        ===================================================== -->
+
+        <section class="contact-section real-contact-section">
+
+            <div class="contact-container">
+
+                <div class="contact-section-label">
+                    LindoPark details
+                </div>
+
+                <h2 class="contact-heading">
+                    Everything you need to reach us.
+                </h2>
+
+
+                <div class="real-contact-grid">
+
+
+                    <!-- ADDRESS -->
+
+                    <article class="real-contact-card">
+
+                        <div class="real-contact-card-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <h3>
+                            Physical Address
+                        </h3>
+
+                        <p>
+                            24 Carnation Street<br>
+                            Lindopark<br>
+                            Pretoria<br>
+                            0186
+                        </p>
+
+                    </article>
+
+
+                    <!-- PHONE -->
+
+                    <article class="real-contact-card">
+
+                        <div class="real-contact-card-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <h3>
+                            Telephone
+                        </h3>
+
+                        <p>
+                            <a href="tel:+27128001608">
+                                012 800 1608
+                            </a>
+                        </p>
+
+                    </article>
+
+
+                    <!-- EMAIL -->
+
+                    <article class="real-contact-card">
+
+                        <div class="real-contact-card-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            <a
+                                href="mailto:lindiesprimary@gmail.com"
+                            >
+                                lindiesprimary@gmail.com
+                            </a>
+                        </p>
+
+                    </article>
+
+
+                    <!-- HOURS -->
+
+                    <article class="real-contact-card">
+
+                        <div class="real-contact-card-icon">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <h3>
+                            School Office Hours
+                        </h3>
+
+                        <p>
+                            Monday – Friday<br>
+                            07:00 – 15:00
+                        </p>
+
+                    </article>
+
+
+                    <!-- SCHOOL -->
+
+                    <article class="real-contact-card wide">
+
+                        <div class="real-contact-card-icon">
+
+                            <i class="fa-solid fa-school"></i>
+
+                        </div>
+
+                        <h3>
+                            Laerskool LindoPark Primary
+                        </h3>
+
+                        <p>
+                            LindoPark Primary School is a public
+                            primary school serving the Lindopark
+                            community in Pretoria. The school's
+                            published vision focuses on an inclusive,
+                            vibrant learning environment that values
+                            diversity, technology and lifelong
+                            learning.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ENQUIRY FORM
+        ===================================================== -->
+
+        <section
+            class="contact-section enquiry-section"
+            id="contact-form"
+        >
+
+            <div class="contact-container">
+
+                <div class="enquiry-grid">
+
+
+                    <div class="enquiry-copy">
+
+                        <div class="contact-section-label">
+                            Send an enquiry
+                        </div>
+
+                        <h2>
+                            Tell us how we can help.
+                        </h2>
+
+                        <p>
+                            Complete the form below and provide
+                            enough information for your enquiry to
+                            be understood clearly.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        class="contact-form"
+                        id="contactForm"
+                        novalidate
+                    >
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="fullName">
+                                    Full Name
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    placeholder="Your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                                <div
+                                    class="field-error"
+                                    id="fullNameError"
+                                >
+                                    Please enter your full name.
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                                <div
+                                    class="field-error"
+                                    id="emailError"
+                                >
+                                    Please enter a valid email
+                                    address.
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Your phone number"
+                                    autocomplete="tel"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="reason">
+                                    Enquiry Type
+                                    <span>*</span>
+                                </label>
+
+                                <select
+                                    id="reason"
+                                    name="reason"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select an option
+                                    </option>
+
+                                    <option value="general">
+                                        General Enquiry
+                                    </option>
+
+                                    <option value="admissions">
+                                        Admissions
+                                    </option>
+
+                                    <option value="academics">
+                                        Academics
+                                    </option>
+
+                                    <option value="sport">
+                                        Sport & Culture
+                                    </option>
+
+                                    <option value="activities">
+                                        School Activities
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                                <div
+                                    class="field-error"
+                                    id="reasonError"
+                                >
+                                    Please select an enquiry type.
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label>
+                                    Preferred Contact Method
+                                </label>
+
+                                <div class="contact-options">
+
+
+                                    <div class="contact-option">
+
+                                        <input
+                                            type="radio"
+                                            id="contactEmail"
+                                            name="preferredContact"
+                                            value="Email"
+                                            checked
+                                        >
+
+                                        <label for="contactEmail">
+                                            Email
+                                        </label>
+
+                                    </div>
+
+
+                                    <div class="contact-option">
+
+                                        <input
+                                            type="radio"
+                                            id="contactPhone"
+                                            name="preferredContact"
+                                            value="Phone"
+                                        >
+
+                                        <label for="contactPhone">
+                                            Phone
+                                        </label>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label for="message">
+                                    Message
+                                    <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    placeholder="Tell us how we can help..."
+                                    required
+                                ></textarea>
+
+                                <div
+                                    class="field-error"
+                                    id="messageError"
+                                >
+                                    Please enter your message.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="consent">
+
+                            <input
+                                type="checkbox"
+                                id="consent"
+                                name="consent"
+                                required
+                            >
+
+                            <label for="consent">
+                                I confirm that the information provided
+                                is correct and may be used to respond
+                                to my enquiry.
+                            </label>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="form-submit"
+                        >
+                            Prepare Enquiry
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+
+                        <div
+                            class="form-success"
+                            id="formSuccess"
+                            role="status"
+                        >
+                            <strong>
+                                Enquiry ready.
+                            </strong>
+
+                            Your information has been successfully
+                            validated. For the live website, this form
+                            can be connected to the school's email or
+                            preferred form-processing service.
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOCATION
+        ===================================================== -->
+
+        <section
+            class="contact-section location-section"
+            id="school-location"
+        >
+
+            <div class="contact-container">
+
+                <div class="location-grid">
+
+
+                    <div class="location-info">
+
+                        <div class="contact-section-label">
+                            Find us
+                        </div>
+
+                        <h2>
+                            Come visit LindoPark.
+                        </h2>
+
+                        <p>
+                            Laerskool LindoPark Primary is located at
+                            24 Carnation Street in Lindopark,
+                            Pretoria. Use the interactive map to
+                            explore the school's location.
+                        </p>
+
+
+                        <div class="location-detail">
+
+                            <div class="location-detail-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Address
+                                </strong>
+
+                                <span>
+                                    24 Carnation Street,
+                                    Lindopark, Pretoria,
+                                    0186
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="location-detail">
+
+                            <div class="location-detail-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Telephone
+                                </strong>
+
+                                <span>
+                                    <a
+                                        href="tel:+27128001608"
+                                    >
+                                        012 800 1608
+                                    </a>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="location-detail">
+
+                            <div class="location-detail-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Office Hours
+                                </strong>
+
+                                <span>
+                                    Monday – Friday,
+                                    07:00 – 15:00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="https://www.google.com/maps/dir/?api=1&destination=Laerskool+Lindopark+Primary,+24+Carnation+Street,+Lindopark,+Pretoria"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="directions-button"
+                        >
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            Get Directions
+                        </a>
+
+                    </div>
+
+
+                    <!-- GOOGLE MAP -->
+
+                    <div class="map-wrapper">
+
+                        <div class="map-label">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            LindoPark Location
+
+                        </div>
+
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.7728749526273!2d28.26964787539871!3d-25.711942977383245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfdf8b7f04b309%3A0x4dab10bb82ed46de!2sLaerskool%20Lindopark%20Primary!5e0!3m2!1sen!2sza!4v1790281362953!5m2!1sen!2sza"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            title="Laerskool Lindopark Primary location">
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ===================================================== -->
+
+        <section class="contact-section faq-section">
+
+            <div class="contact-container">
+
+                <div class="faq-header">
+
+                    <div class="contact-section-label">
+                        Frequently asked
+                    </div>
+
+                    <h2 class="contact-heading">
+                        Questions, answered.
+                    </h2>
+
+                </div>
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            How can I contact LindoPark?
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                You can call the school on
+                                <strong>012 800 1608</strong> or email
+                                <strong>lindiesprimary@gmail.com</strong>.
+                                You can also use the enquiry form on
+                                this page.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            Where is the school located?
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                Laerskool LindoPark Primary is located
+                                at <strong>24 Carnation Street,
+                                Lindopark, Pretoria, 0186</strong>.
+                                The interactive Google Map above can be
+                                used to view the location.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            What are the school office hours?
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                The current business listing shows
+                                Monday to Friday office hours of
+                                <strong>07:00–15:00</strong>.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            How can I ask about admissions?
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                Visit the Admissions page for
+                                information about applications,
+                                registration and documents. You can
+                                also contact the school directly for
+                                current admission information.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            Can I get directions to the school?
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                Yes. Select the
+                                <strong>Get Directions</strong> button
+                                next to the map to open Google Maps
+                                directions to the school.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ===================================================== -->
+
+        <section class="contact-cta">
+
+            <div class="cta-inner">
+
+                <span>
+                    Begin your LindoPark journey
+                </span>
+
+                <h2>
+                    Looking for admission information?
+                </h2>
+
+                <p>
+                    Explore the Admissions page to learn about the
+                    enrolment process and the information currently
+                    available for prospective families.
+                </p>
+
+                <a
+                    href="admissions.html"
+                    class="cta-button"
+                >
+                    Explore Admissions
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lindopark"
+            >
+
+            <p>
+
+                More than a school.
+                <br>
+
+                <strong>
+                    'n Gemeenskap.
+                </strong>
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span class="footer-title">
+                EXPLORE
+            </span>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a href="sport-culture.html">
+                Sport & Culture
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <span class="footer-title">
+                INFORMATION
+            </span>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <span class="footer-title">
+                FIND US
+            </span>
+
+            <p>
+
+                24 Carnation Street
+                <br>
+
+                Lindopark
+                <br>
+
+                Pretoria
+
+            </p>
+
+            <a href="tel:0128001608">
+                012 800 1608
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2026 Laerskool LindoPark
+        </span>
+
+        <strong>
+            OPWAARTS.
+        </strong>
+
+    </div>
+
+</footer>
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================= -->
+
+    <button
+        id="backToTop"
+        class="back-to-top"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =================================================
+                   MOBILE MENU
+                ================================================= */
+
+                const menuToggle =
+                    document.getElementById(
+                        "menuToggle"
+                    );
+
+                const mobileSidebar =
+                    document.getElementById(
+                        "mobileSidebar"
+                    );
+
+                const mobileOverlay =
+                    document.getElementById(
+                        "mobileOverlay"
+                    );
+
+                const sidebarClose =
+                    document.getElementById(
+                        "sidebarClose"
+                    );
+
+
+                function openMenu() {
+
+                    mobileSidebar?.classList.add(
+                        "active"
+                    );
+
+                    mobileOverlay?.classList.add(
+                        "active"
+                    );
+
+                    mobileSidebar?.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+                    mobileOverlay?.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+                    menuToggle?.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                }
+
+
+                function closeMenu() {
+
+                    mobileSidebar?.classList.remove(
+                        "active"
+                    );
+
+                    mobileOverlay?.classList.remove(
+                        "active"
+                    );
+
+                    mobileSidebar?.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                    mobileOverlay?.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                    menuToggle?.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+
+                menuToggle?.addEventListener(
+                    "click",
+                    openMenu
+                );
+
+                sidebarClose?.addEventListener(
+                    "click",
+                    closeMenu
+                );
+
+                mobileOverlay?.addEventListener(
+                    "click",
+                    closeMenu
+                );
+
+
+                mobileSidebar
+                    ?.querySelectorAll("a")
+                    .forEach(
+                        function (link) {
+
+                            link.addEventListener(
+                                "click",
+                                closeMenu
+                            );
+
+                        }
+                    );
+
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape"
+                        ) {
+                            closeMenu();
+                        }
+
+                    }
+                );
+
+
+                /* =================================================
+                   FORM
+                ================================================= */
+
+                const contactForm =
+                    document.getElementById(
+                        "contactForm"
+                    );
+
+                const formSuccess =
+                    document.getElementById(
+                        "formSuccess"
+                    );
+
+
+                function showError(
+                    input,
+                    errorId
+                ) {
+
+                    input.classList.add(
+                        "invalid"
+                    );
+
+                    document
+                        .getElementById(errorId)
+                        ?.classList.add(
+                            "show"
+                        );
+
+                }
+
+
+                function clearError(
+                    input,
+                    errorId
+                ) {
+
+                    input.classList.remove(
+                        "invalid"
+                    );
+
+                    document
+                        .getElementById(errorId)
+                        ?.classList.remove(
+                            "show"
+                        );
+
+                }
+
+
+                contactForm?.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        const fullName =
+                            document.getElementById(
+                                "fullName"
+                            );
+
+                        const email =
+                            document.getElementById(
+                                "email"
+                            );
+
+                        const reason =
+                            document.getElementById(
+                                "reason"
+                            );
+
+                        const message =
+                            document.getElementById(
+                                "message"
+                            );
+
+                        const consent =
+                            document.getElementById(
+                                "consent"
+                            );
+
+
+                        let valid = true;
+
+
+                        /* NAME */
+
+                        if (
+                            fullName.value.trim()
+                                .length < 2
+                        ) {
+
+                            showError(
+                                fullName,
+                                "fullNameError"
+                            );
+
+                            valid = false;
+
+                        } else {
+
+                            clearError(
+                                fullName,
+                                "fullNameError"
+                            );
+
+                        }
+
+
+                        /* EMAIL */
+
+                        const emailPattern =
+                            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                        if (
+                            !emailPattern.test(
+                                email.value.trim()
+                            )
+                        ) {
+
+                            showError(
+                                email,
+                                "emailError"
+                            );
+
+                            valid = false;
+
+                        } else {
+
+                            clearError(
+                                email,
+                                "emailError"
+                            );
+
+                        }
+
+
+                        /* REASON */
+
+                        if (!reason.value) {
+
+                            showError(
+                                reason,
+                                "reasonError"
+                            );
+
+                            valid = false;
+
+                        } else {
+
+                            clearError(
+                                reason,
+                                "reasonError"
+                            );
+
+                        }
+
+
+                        /* MESSAGE */
+
+                        if (
+                            message.value.trim()
+                                .length < 10
+                        ) {
+
+                            showError(
+                                message,
+                                "messageError"
+                            );
+
+                            valid = false;
+
+                        } else {
+
+                            clearError(
+                                message,
+                                "messageError"
+                            );
+
+                        }
+
+
+                        /* CONSENT */
+
+                        if (
+                            !consent.checked
+                        ) {
+
+                            consent.focus();
+
+                            valid = false;
+
+                        }
+
+
+                        if (!valid) {
+
+                            const firstInvalid =
+                                contactForm.querySelector(
+                                    ".invalid"
+                                );
+
+                            firstInvalid?.focus();
+
+                            return;
+
+                        }
+
+
+                        formSuccess.classList.add(
+                            "show"
+                        );
+
+
+                        formSuccess.scrollIntoView({
+                            behavior: "smooth",
+                            block: "nearest"
+                        });
+
+
+                        contactForm.reset();
+
+
+                        document.getElementById(
+                            "contactEmail"
+                        ).checked = true;
+
+
+                        setTimeout(
+                            function () {
+
+                                formSuccess.classList.remove(
+                                    "show"
+                                );
+
+                            },
+                            10000
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   CLEAR FORM ERRORS
+                ================================================= */
+
+                document
+                    .querySelectorAll(
+                        "#contactForm input, #contactForm select, #contactForm textarea"
+                    )
+                    .forEach(
+                        function (field) {
+
+                            field.addEventListener(
+                                "input",
+                                function () {
+
+                                    field.classList.remove(
+                                        "invalid"
+                                    );
+
+                                }
+                            );
+
+                            field.addEventListener(
+                                "change",
+                                function () {
+
+                                    field.classList.remove(
+                                        "invalid"
+                                    );
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                /* =================================================
+                   FAQ
+                ================================================= */
+
+                const faqItems =
+                    document.querySelectorAll(
+                        ".faq-item"
+                    );
+
+
+                faqItems.forEach(
+                    function (item) {
+
+                        const question =
+                            item.querySelector(
+                                ".faq-question"
+                            );
+
+                        const answer =
+                            item.querySelector(
+                                ".faq-answer"
+                            );
+
+
+                        question.addEventListener(
+                            "click",
+                            function () {
+
+                                const isActive =
+                                    item.classList.contains(
+                                        "active"
+                                    );
+
+
+                                faqItems.forEach(
+                                    function (
+                                        otherItem
+                                    ) {
+
+                                        otherItem.classList.remove(
+                                            "active"
+                                        );
+
+                                        const otherQuestion =
+                                            otherItem.querySelector(
+                                                ".faq-question"
+                                            );
+
+                                        const otherAnswer =
+                                            otherItem.querySelector(
+                                                ".faq-answer"
+                                            );
+
+                                        otherQuestion.setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
+
+                                        otherAnswer.style.maxHeight =
+                                            null;
+
+                                    }
+                                );
+
+
+                                if (!isActive) {
+
+                                    item.classList.add(
+                                        "active"
+                                    );
+
+                                    question.setAttribute(
+                                        "aria-expanded",
+                                        "true"
+                                    );
+
+                                    answer.style.maxHeight =
+                                        answer.scrollHeight +
+                                        "px";
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   BACK TO TOP
+                ================================================= */
+
+                const backToTop =
+                    document.getElementById(
+                        "backToTop"
+                    );
+
+
+                if (backToTop) {
+
+                    window.addEventListener(
+                        "scroll",
+                        function () {
+
+                            if (
+                                window.scrollY >
+                                500
+                            ) {
+
+                                backToTop.classList.add(
+                                    "show"
+                                );
+
+                            } else {
+
+                                backToTop.classList.remove(
+                                    "show"
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+                    backToTop.addEventListener(
+                        "click",
+                        function () {
+
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>

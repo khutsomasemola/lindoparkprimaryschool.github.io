@@ -1,0 +1,7884 @@
+/* =====================================================
+   LINDOPARK INNER PAGES
+   ===================================================== */
+
+
+/* ================= PAGE HERO ================= */
+
+.page-hero {
+
+    min-height: 62vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            110deg,
+            rgba(7, 31, 56, 0.98),
+            rgba(32, 84, 154, 0.88)
+        );
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+
+.page-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(213, 179, 77, 0.2);
+
+    border-radius: 50%;
+
+    right: -150px;
+    bottom: -250px;
+
+}
+
+
+.page-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 80px;
+
+    max-width: 850px;
+
+}
+
+
+.page-hero h1 {
+
+    font-size: clamp(48px, 7vw, 86px);
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.page-hero h1 span {
+
+    color: var(--gold);
+
+}
+
+
+.page-hero p {
+
+    max-width: 580px;
+
+    font-size: 18px;
+
+    color: rgba(255,255,255,0.75);
+
+}
+
+
+/* ================= GENERAL PAGE ================= */
+
+.page-section {
+
+    padding: 110px 0;
+
+}
+
+
+/* ================= ABOUT INTRO ================= */
+
+.about-intro {
+
+    background: white;
+
+}
+
+
+.about-intro-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.65fr 1.35fr;
+
+    gap: 80px;
+
+}
+
+
+.about-intro-content {
+
+    max-width: 780px;
+
+}
+
+
+.about-intro-content h2 {
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about-intro-content h2 span {
+
+    color: var(--blue);
+
+}
+
+
+.about-intro-content p {
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ================= VISION ================= */
+
+.vision-section {
+
+    padding: 120px 0;
+
+    background: var(--navy);
+
+    color: white;
+
+}
+
+
+.vision-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.35fr 1.65fr;
+
+    gap: 70px;
+
+}
+
+
+.vision-number {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 80px;
+
+    font-weight: 800;
+
+    color: rgba(213,179,77,0.25);
+
+}
+
+
+.vision-content {
+
+    max-width: 850px;
+
+}
+
+
+.vision-content h2 {
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.vision-content h2 span {
+
+    color: var(--gold);
+
+}
+
+
+.vision-content p {
+
+    max-width: 760px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ================= MISSION ================= */
+
+.mission-section {
+
+    background: var(--off-white);
+
+}
+
+
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+}
+
+
+.mission-content h2 {
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.mission-content h2 span {
+
+    color: var(--blue);
+
+}
+
+
+.mission-content > p {
+
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* Mission points */
+
+.mission-points {
+
+    display: grid;
+
+    gap: 0;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+}
+
+
+.mission-point {
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 15px;
+
+    padding: 28px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.mission-point:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.mission-point > span {
+
+    color: var(--gold);
+
+    font-weight: 800;
+
+}
+
+
+.mission-point strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+
+.mission-point p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+/* ================= VALUES ================= */
+
+.values-section {
+
+    padding: 110px 0;
+
+    background: white;
+
+}
+
+
+.section-heading.centered p {
+
+    max-width: 580px;
+
+    margin: 20px auto 0;
+
+    color: var(--muted);
+
+}
+
+
+.belief-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 60px;
+
+}
+
+
+.belief-card {
+
+    padding: 35px 30px;
+
+    min-height: 300px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: 0.3s ease;
+
+}
+
+
+.belief-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.belief-card > span {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.belief-card h3 {
+
+    font-size: 23px;
+
+    margin: 60px 0 15px;
+
+}
+
+
+.belief-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+/* ================= CTA ================= */
+
+.page-cta {
+
+    padding: 90px 0;
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+
+.page-cta-inner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+
+.page-cta h2 {
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    letter-spacing: -3px;
+
+}
+
+
+.page-cta h2 span {
+
+    color: var(--gold);
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .about-intro-grid,
+    .vision-grid,
+    .mission-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .belief-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .vision-number {
+
+        font-size: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .page-section,
+    .values-section {
+
+        padding: 80px 0;
+
+    }
+
+
+    .page-hero {
+
+        min-height: 70vh;
+
+    }
+
+
+    .page-hero h1 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .belief-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .page-cta-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+/* =====================================================
+   ACADEMICS PAGE — PREMIUM SCHOOL DESIGN
+===================================================== */
+
+.academics-hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(7, 31, 56, 0.98) 0%,
+            rgba(7, 31, 56, 0.90) 48%,
+            rgba(18, 59, 112, 0.72) 100%);
+
+    color: var(--white);
+}
+
+/* subtle decorative circle */
+.academics-hero::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    right: -180px;
+    bottom: -230px;
+
+    border: 1px solid rgba(213, 179, 77, 0.35);
+    border-radius: 50%;
+}
+
+.academics-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.academics-hero .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+.academics-hero .eyebrow::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.academics-hero h1 {
+    max-width: 800px;
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(3.2rem, 6vw, 5.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+}
+
+.academics-hero h1 span {
+    color: var(--gold);
+}
+
+.academics-hero p {
+    max-width: 620px;
+    margin-top: 30px;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.page-section {
+    padding: 120px 0;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--red);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+.two-column h2,
+.section-heading h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--navy);
+}
+
+.two-column p {
+    margin: 0 0 22px;
+
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.two-column p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   LEARNING JOURNEY
+===================================================== */
+
+.learning-journey {
+    position: relative;
+    padding: 120px 0;
+
+    background: var(--off-white);
+}
+
+.section-heading {
+    max-width: 720px;
+}
+
+.section-heading.centered {
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.section-heading.centered .section-label {
+    color: var(--red);
+}
+
+.section-heading p {
+    max-width: 600px;
+    margin: 25px 0 0;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* timeline line */
+
+.phase-grid {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+
+    margin-top: 75px;
+}
+
+.phase-grid::before {
+    content: "";
+
+    position: absolute;
+    top: 42px;
+    left: 16.66%;
+    right: 16.66%;
+
+    height: 1px;
+
+    background: var(--border);
+}
+
+
+/* cards */
+
+.phase-card {
+    position: relative;
+
+    padding: 0 35px 35px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.phase-card:hover {
+    transform: translateY(-8px);
+}
+
+.phase-number {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 84px;
+    height: 84px;
+
+    margin: 0 auto 38px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--white);
+
+    color: var(--blue);
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+
+    box-shadow: 0 10px 30px rgba(7, 31, 56, 0.08);
+}
+
+.phase-card:nth-child(2) .phase-number {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+}
+
+.phase-tag {
+    display: block;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    color: var(--red);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.phase-card h3 {
+    margin: 0 0 16px;
+
+    text-align: center;
+
+    color: var(--navy);
+    font-family: "Manrope", sans-serif;
+    font-size: 1.65rem;
+}
+
+.phase-card p {
+    max-width: 310px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+.phase-footer {
+    display: none;
+}
+
+
+/* =====================================================
+   APPROACH
+===================================================== */
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 70px;
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.approach-card {
+    position: relative;
+
+    min-height: 270px;
+    padding: 45px;
+
+    background: var(--white);
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.approach-card:hover {
+    background: var(--light-blue);
+}
+
+.approach-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 35px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    color: var(--white);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.approach-card h3 {
+    margin: 0 0 15px;
+
+    color: var(--navy);
+    font-family: "Manrope", sans-serif;
+    font-size: 1.35rem;
+}
+
+.approach-card p {
+    max-width: 460px;
+
+    margin: 0;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   OPWAARTS SECTION
+===================================================== */
+
+.opwaarts-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 130px 0;
+
+    background: var(--navy);
+    color: var(--white);
+}
+
+.opwaarts-section::before {
+    content: "OPWAARTS";
+
+    position: absolute;
+    right: -50px;
+    bottom: -65px;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 10rem;
+    font-weight: 800;
+    letter-spacing: -0.08em;
+}
+
+.opwaarts-content {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.light-label {
+    color: var(--gold);
+}
+
+.opwaarts-content h2 {
+    margin: 0 0 25px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.opwaarts-content p {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.68);
+    line-height: 1.9;
+}
+
+
+/* OPWAARTS CIRCLE */
+
+.opwaarts-mark {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 300px;
+
+    margin-left: auto;
+
+    border: 1px solid rgba(213, 179, 77, 0.45);
+    border-radius: 50%;
+}
+
+.opwaarts-mark::before {
+    content: "";
+
+    position: absolute;
+
+    width: 245px;
+    height: 245px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.opwaarts-mark span {
+    position: relative;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.opwaarts-mark small {
+    position: relative;
+
+    margin-top: 10px;
+
+    color: rgba(255,255,255,0.6);
+
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.page-cta {
+    padding: 120px 0;
+
+    background: var(--white);
+
+    text-align: center;
+}
+
+.page-cta .section-label {
+    color: var(--red);
+}
+
+.page-cta h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: var(--navy);
+}
+
+.page-cta p {
+    max-width: 500px;
+
+    margin: 25px auto 35px;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 26px;
+
+    border-radius: 50px;
+
+    background: var(--blue);
+    color: var(--white);
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.btn-primary:hover {
+    background: var(--navy);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .academics-hero {
+        min-height: 520px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .phase-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .phase-grid::before {
+        display: none;
+    }
+
+    .phase-card {
+        padding: 0 20px;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opwaarts-content {
+        grid-template-columns: 1fr;
+    }
+
+    .opwaarts-mark {
+        margin: 20px auto 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .academics-hero {
+        min-height: 500px;
+    }
+
+    .academics-hero h1 {
+        font-size: 3rem;
+    }
+
+    .page-section,
+    .learning-journey,
+    .opwaarts-section,
+    .page-cta {
+        padding: 80px 0;
+    }
+
+    .two-column h2,
+    .section-heading h2 {
+        font-size: 2.5rem;
+    }
+
+    .approach-card {
+        min-height: auto;
+        padding: 32px;
+    }
+
+    .opwaarts-mark {
+        width: 230px;
+        height: 230px;
+    }
+
+    .opwaarts-mark::before {
+        width: 190px;
+        height: 190px;
+    }
+
+    .opwaarts-mark span {
+        font-size: 1.4rem;
+    }
+}
+```css
+/* =========================================================
+   ADMISSIONS PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   ADMISSIONS HERO
+   --------------------------------------------------------- */
+
+.admissions-hero {
+    min-height: 560px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 31, 56, 0.92),
+            rgba(32, 84, 154, 0.72)
+        ),
+        url("../assets/images/school-hero.jpg") center/cover no-repeat;
+}
+
+.admissions-hero .page-hero-content {
+    max-width: 850px;
+}
+
+.admissions-hero .section-label {
+    color: var(--gold);
+}
+
+.admissions-hero h1 {
+    max-width: 780px;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.admissions-hero p {
+    max-width: 680px;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   ADMISSIONS INTRO
+   --------------------------------------------------------- */
+
+.admissions-intro {
+    background: var(--white);
+}
+
+.admissions-intro-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.admissions-intro-content {
+    max-width: 680px;
+}
+
+.admissions-intro-content h2 {
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.1;
+    margin: 12px 0 25px;
+}
+
+.admissions-intro-content p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+}
+
+.admissions-intro-content .btn {
+    margin-top: 15px;
+}
+
+
+/* INTRO CARD */
+
+.admissions-intro-card {
+    position: relative;
+    padding: 45px;
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    color: var(--white);
+}
+
+.admissions-intro-card::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    top: -80px;
+    right: -70px;
+}
+
+.admissions-intro-card::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(213,179,77,0.25);
+    border-radius: 50%;
+    bottom: -70px;
+    left: -50px;
+}
+
+.admissions-card-icon {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid rgba(213,179,77,0.7);
+    border-radius: 50%;
+
+    color: var(--gold);
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+.admissions-intro-card h3 {
+    position: relative;
+    z-index: 1;
+
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.admissions-intro-card p {
+    position: relative;
+    z-index: 1;
+
+    color: rgba(255,255,255,0.82);
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.admissions-card-line {
+    position: relative;
+    z-index: 1;
+
+    width: 55px;
+    height: 3px;
+    background: var(--gold);
+
+    margin-bottom: 20px;
+}
+
+.admissions-intro-card strong {
+    position: relative;
+    z-index: 1;
+
+    color: var(--gold);
+    font-size: 15px;
+    letter-spacing: 0.05em;
+}
+
+
+/* ---------------------------------------------------------
+   ADMISSION PROCESS
+   --------------------------------------------------------- */
+
+.admission-process {
+    background: var(--off-white);
+}
+
+.admission-process .section-heading {
+    margin-bottom: 60px;
+}
+
+.admission-process .section-heading p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* STEPS */
+
+.admission-steps {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.admission-step {
+    position: relative;
+
+    display: flex;
+    gap: 25px;
+
+    padding: 35px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.admission-step:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: rgba(32,84,154,0.25);
+}
+
+.step-number {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.step-content {
+    padding-top: 2px;
+}
+
+.step-content > span {
+    display: block;
+
+    color: var(--red);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.step-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.step-content p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   GRADES SECTION
+   --------------------------------------------------------- */
+
+.admission-grades {
+    background: var(--white);
+}
+
+.admission-grades .section-heading {
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.admission-grades .section-heading h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.15;
+    margin: 12px 0 18px;
+}
+
+.admission-grades .section-heading p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* GRADE GRID */
+
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.grade-card {
+    position: relative;
+
+    padding: 38px;
+
+    min-height: 330px;
+
+    background: var(--light-blue);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.grade-card:nth-child(2) {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.grade-card:nth-child(2) p {
+    color: rgba(255,255,255,0.72);
+}
+
+.grade-card:nth-child(3) {
+    background: #f8f3e4;
+}
+
+.grade-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.grade-card::after {
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border: 1px solid rgba(32,84,154,0.1);
+    border-radius: 50%;
+
+    right: -65px;
+    bottom: -65px;
+}
+
+.grade-number {
+    display: block;
+
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+
+    margin-bottom: 28px;
+}
+
+.grade-card:nth-child(2) .grade-number {
+    color: var(--gold);
+}
+
+.grade-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.grade-card p {
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 25px;
+}
+
+.grade-afrikaans {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    background: rgba(32,84,154,0.09);
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.grade-card:nth-child(2) .grade-afrikaans {
+    background: rgba(213,179,77,0.15);
+    color: var(--gold);
+}
+
+
+/* ---------------------------------------------------------
+   ADMISSION INFORMATION
+   --------------------------------------------------------- */
+
+.admission-info {
+    background: var(--off-white);
+}
+
+.admission-info-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+
+/* LEFT PANEL */
+
+.admission-info-panel {
+    padding: 45px;
+
+    background: var(--navy);
+    border-radius: var(--radius);
+
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.admission-info-panel .section-label {
+    color: var(--gold);
+}
+
+.admission-info-panel h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+
+    margin: 15px 0 20px;
+}
+
+.admission-info-panel > p {
+    color: rgba(255,255,255,0.72);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* CHECK LIST */
+
+.admission-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admission-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+
+    color: rgba(255,255,255,0.82);
+    line-height: 1.55;
+}
+
+.admission-list li:last-child {
+    border-bottom: none;
+}
+
+.admission-list li span {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 23px;
+    height: 23px;
+
+    border-radius: 50%;
+
+    background: rgba(213,179,77,0.15);
+    color: var(--gold);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* RIGHT INFORMATION BOXES */
+
+.admission-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+
+    padding: 30px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateX(6px);
+    box-shadow: var(--shadow);
+}
+
+.info-icon {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 14px;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.info-box:nth-child(2) .info-icon {
+    background: rgba(165,47,53,0.08);
+    color: var(--red);
+}
+
+.info-box:nth-child(3) .info-icon {
+    background: rgba(213,179,77,0.15);
+    color: #9a7b1d;
+}
+
+.info-box h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.info-box p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   APPLICATION CTA
+   --------------------------------------------------------- */
+
+.admission-application {
+    padding-top: 30px;
+    background: var(--off-white);
+}
+
+.application-box {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 0.35fr;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.application-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 65px;
+}
+
+.application-content .section-label {
+    color: var(--gold);
+}
+
+.application-content h2 {
+    max-width: 650px;
+
+    font-size: clamp(35px, 4vw, 52px);
+    line-height: 1.1;
+
+    margin: 15px 0 20px;
+}
+
+.application-content > p {
+    max-width: 650px;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* APPLICATION BUTTONS */
+
+.application-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.application-buttons .btn-primary {
+    background: var(--white);
+    color: var(--blue-dark);
+}
+
+.application-buttons .btn-primary:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.application-buttons .btn-outline {
+    border-color: rgba(255,255,255,0.5);
+    color: var(--white);
+}
+
+.application-buttons .btn-outline:hover {
+    background: var(--white);
+    color: var(--blue-dark);
+}
+
+
+/* APPLICATION SIDE */
+
+.application-side {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(7,31,56,0.35);
+
+    text-align: center;
+}
+
+.application-side::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border: 1px solid rgba(213,179,77,0.22);
+    border-radius: 50%;
+}
+
+.application-word {
+    position: relative;
+    z-index: 1;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    transform: rotate(-8deg);
+}
+
+.application-side p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 180px;
+
+    color: rgba(255,255,255,0.75);
+
+    line-height: 1.6;
+
+    margin-top: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   ADMISSION CONTACT
+   --------------------------------------------------------- */
+
+.admission-contact {
+    background: var(--white);
+}
+
+.admission-contact .section-heading {
+    margin-bottom: 50px;
+}
+
+.admission-contact .section-heading h2 {
+    font-size: clamp(34px, 4vw, 48px);
+    margin: 12px 0 15px;
+}
+
+.admission-contact .section-heading p {
+    color: var(--muted);
+}
+
+
+/* CONTACT CARDS */
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    padding: 35px;
+
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.contact-card-label {
+    display: block;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .admissions-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .admissions-intro-content {
+        max-width: 800px;
+    }
+
+    .admissions-intro-card {
+        min-height: 320px;
+    }
+
+    .admission-info-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .grade-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grade-card:last-child {
+        grid-column: span 2;
+    }
+
+    .application-box {
+        grid-template-columns: 1fr;
+    }
+
+    .application-side {
+        min-height: 220px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-card:last-child {
+        grid-column: span 2;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .admissions-hero {
+        min-height: 500px;
+    }
+
+    .admissions-hero h1 {
+        font-size: 42px;
+    }
+
+    .admissions-hero p {
+        font-size: 16px;
+    }
+
+    .admissions-intro-grid {
+        gap: 30px;
+    }
+
+    .admissions-intro-card {
+        padding: 32px;
+        min-height: 330px;
+    }
+
+    .admissions-intro-card h3 {
+        font-size: 26px;
+    }
+
+
+    /* Admission steps */
+
+    .admission-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .admission-step {
+        padding: 28px;
+    }
+
+
+    /* Grades */
+
+    .grade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-card:last-child {
+        grid-column: auto;
+    }
+
+    .grade-card {
+        min-height: auto;
+        padding: 30px;
+    }
+
+
+    /* Information */
+
+    .admission-info-panel {
+        padding: 32px;
+    }
+
+    .info-box {
+        padding: 25px;
+        gap: 18px;
+    }
+
+
+    /* Application */
+
+    .application-content {
+        padding: 40px 30px;
+    }
+
+    .application-content h2 {
+        font-size: 38px;
+    }
+
+    .application-side {
+        min-height: 200px;
+    }
+
+
+    /* Contact */
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card:last-child {
+        grid-column: auto;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .admissions-hero h1 {
+        font-size: 36px;
+    }
+
+    .admissions-intro-card {
+        padding: 28px;
+    }
+
+    .admission-step {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+    }
+
+    .grade-number {
+        font-size: 40px;
+    }
+
+    .admission-info-panel {
+        padding: 28px;
+    }
+
+    .info-box {
+        flex-direction: column;
+    }
+
+    .application-content {
+        padding: 35px 25px;
+    }
+
+    .application-content h2 {
+        font-size: 34px;
+    }
+
+    .application-buttons {
+        flex-direction: column;
+    }
+
+    .application-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+```css
+/* =========================================================
+   SPORT & CULTURE PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.activities-page-hero {
+    min-height: 570px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 31, 56, 0.94),
+            rgba(32, 84, 154, 0.76)
+        ),
+        url("../assets/images/school-hero.jpg") center/cover no-repeat;
+}
+
+.activities-page-hero .page-hero-content {
+    max-width: 900px;
+}
+
+.activities-page-hero .section-label {
+    color: var(--gold);
+}
+
+.activities-page-hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.03;
+
+    margin-bottom: 25px;
+}
+
+.activities-page-hero p {
+    max-width: 700px;
+
+    font-size: 18px;
+    line-height: 1.85;
+
+    color: rgba(255,255,255,0.84);
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.activities-intro {
+    background: var(--white);
+}
+
+.activities-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.activities-intro-content {
+    max-width: 700px;
+}
+
+.activities-intro-content h2 {
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.08;
+
+    margin: 12px 0 25px;
+}
+
+.activities-intro-content p {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* INTRO POINTS */
+
+.activities-intro-points {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.activities-intro-points div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.activities-intro-points strong {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+}
+
+.activities-intro-points span {
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* INTRO FEATURE */
+
+.activities-intro-feature {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            var(--blue-dark)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-intro-feature::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 50%;
+
+    top: -130px;
+    right: -100px;
+}
+
+.activities-intro-feature::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(213,179,77,0.20);
+
+    border-radius: 50%;
+
+    bottom: -90px;
+    left: -70px;
+}
+
+.feature-number {
+    position: relative;
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-content > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+    margin-bottom: 12px;
+}
+
+.feature-content h3 {
+    max-width: 440px;
+
+    font-size: 31px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.feature-content p {
+    max-width: 460px;
+
+    color: rgba(255,255,255,0.72);
+
+    line-height: 1.8;
+}
+
+.feature-word {
+    position: absolute;
+    z-index: 1;
+
+    right: -15px;
+    bottom: -18px;
+
+    color: rgba(255,255,255,0.035);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT SECTION
+   --------------------------------------------------------- */
+
+.sport-section {
+    background: var(--off-white);
+}
+
+.activities-heading {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: end;
+
+    margin-bottom: 50px;
+}
+
+.activities-heading h2 {
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+
+    margin-top: 12px;
+}
+
+.activities-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT CARDS
+   --------------------------------------------------------- */
+
+.sport-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sport-card {
+    position: relative;
+
+    min-height: 410px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-9px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* CARD BACKGROUNDS */
+
+.sport-athletics {
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+}
+
+.sport-soccer {
+    background:
+        linear-gradient(
+            145deg,
+            var(--red),
+            #702229
+        );
+}
+
+.sport-netball {
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            #183f6e
+        );
+}
+
+.sport-chess {
+    background:
+        linear-gradient(
+            145deg,
+            #8b7023,
+            var(--gold)
+        );
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.sport-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    right: -80px;
+    bottom: -80px;
+}
+
+
+/* TOP */
+
+.sport-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+.sport-number {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: rgba(255,255,255,0.72);
+}
+
+.sport-category {
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(255,255,255,0.62);
+}
+
+
+/* CONTENT */
+
+.sport-card-content {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+}
+
+.sport-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 15px;
+
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sport-card h3 {
+    font-size: 27px;
+
+    margin-bottom: 13px;
+}
+
+.sport-card p {
+    color: rgba(255,255,255,0.76);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+.afrikaans-tag {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50px;
+
+    color: rgba(255,255,255,0.9);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   CULTURE SECTION
+   --------------------------------------------------------- */
+
+.culture-section {
+    background: var(--white);
+}
+
+.culture-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.culture-heading {
+    position: sticky;
+
+    top: 120px;
+}
+
+.culture-heading h2 {
+    font-size: clamp(37px, 4vw, 54px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.culture-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+
+/* CULTURE QUOTE */
+
+.culture-quote {
+    margin-top: 35px;
+
+    padding: 25px 30px;
+
+    border-left: 4px solid var(--gold);
+
+    background: var(--light-blue);
+}
+
+.culture-quote > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+    line-height: 0.6;
+
+    margin-bottom: 15px;
+}
+
+.culture-quote p {
+    color: var(--blue-dark);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 0;
+}
+
+
+/* CULTURE GRID */
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.culture-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background: var(--off-white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+.culture-card:nth-child(2) {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(3) {
+    background: var(--blue);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(4) {
+    background: #f8f3e4;
+}
+
+.culture-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border: 1px solid rgba(32,84,154,0.1);
+
+    border-radius: 50%;
+
+    right: -50px;
+    top: -50px;
+}
+
+.culture-card:nth-child(2)::after,
+.culture-card:nth-child(3)::after {
+    border-color: rgba(255,255,255,0.10);
+}
+
+.culture-card-number {
+    position: absolute;
+
+    top: 28px;
+    left: 32px;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.culture-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.culture-card p {
+    position: relative;
+    z-index: 2;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.culture-card:nth-child(2) p,
+.culture-card:nth-child(3) p {
+    color: rgba(255,255,255,0.72);
+}
+
+.culture-card > span:last-child {
+    position: relative;
+    z-index: 2;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+}
+
+.culture-card:nth-child(2) > span:last-child,
+.culture-card:nth-child(3) > span:last-child {
+    color: var(--gold);
+}
+
+
+/* ---------------------------------------------------------
+   LEARNER DEVELOPMENT
+   --------------------------------------------------------- */
+
+.learner-development {
+    background: var(--off-white);
+}
+
+.learner-development-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.learner-development-content h2 {
+    font-size: clamp(37px, 4vw, 53px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.learner-development-content p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    margin-bottom: 28px;
+}
+
+
+/* DEVELOPMENT LIST */
+
+.development-list {
+    border-top: 1px solid var(--border);
+}
+
+.development-item {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.development-item > span {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.development-item h3 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.development-item p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CTA
+   --------------------------------------------------------- */
+
+.activities-cta {
+    padding-top: 30px;
+
+    background: var(--off-white);
+}
+
+.activities-cta-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.35fr;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-cta-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 65px;
+}
+
+.activities-cta-content .section-label {
+    color: var(--gold);
+}
+
+.activities-cta-content h2 {
+    max-width: 600px;
+
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.08;
+
+    margin: 14px 0 20px;
+}
+
+.activities-cta-content > p {
+    max-width: 620px;
+
+    color: rgba(255,255,255,0.76);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* CTA BUTTONS */
+
+.activities-cta-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.activities-cta-buttons .btn-primary {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+.activities-cta-buttons .btn-primary:hover {
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+.activities-cta-buttons .btn-outline {
+    color: var(--white);
+
+    border-color: rgba(255,255,255,0.5);
+}
+
+.activities-cta-buttons .btn-outline:hover {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+
+/* CTA SIDE */
+
+.activities-cta-side {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(7,31,56,0.38);
+
+    text-align: center;
+}
+
+.activities-cta-side::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border: 1px solid rgba(213,179,77,0.25);
+
+    border-radius: 50%;
+}
+
+.activities-cta-side span {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.activities-cta-side strong {
+    position: relative;
+    z-index: 2;
+
+    margin: 10px 0;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 42px;
+    letter-spacing: 0.05em;
+}
+
+.activities-cta-side p {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.7);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sport-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+    .activities-intro-grid {
+        gap: 50px;
+    }
+
+    .culture-layout {
+        gap: 50px;
+    }
+
+    .learner-development-grid {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .activities-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-intro-feature {
+        min-height: 350px;
+    }
+
+    .activities-heading {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .culture-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-heading {
+        position: static;
+
+        max-width: 750px;
+    }
+
+    .learner-development-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learner-development-content {
+        max-width: 700px;
+    }
+
+    .activities-cta-box {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-cta-side {
+        min-height: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .activities-page-hero {
+        min-height: 510px;
+    }
+
+    .activities-page-hero h1 {
+        font-size: 42px;
+    }
+
+    .activities-page-hero p {
+        font-size: 16px;
+    }
+
+
+    /* Intro */
+
+    .activities-intro-grid {
+        gap: 35px;
+    }
+
+    .activities-intro-feature {
+        padding: 32px;
+
+        min-height: 350px;
+    }
+
+    .feature-content h3 {
+        font-size: 27px;
+    }
+
+    .feature-word {
+        font-size: 75px;
+    }
+
+
+    /* Points */
+
+    .activities-intro-points {
+        gap: 25px;
+    }
+
+
+    /* Sport */
+
+    .sport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+
+    /* Culture */
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card {
+        min-height: 260px;
+    }
+
+
+    /* Development */
+
+    .development-item {
+        grid-template-columns: 45px 1fr;
+    }
+
+
+    /* CTA */
+
+    .activities-cta-content {
+        padding: 42px 30px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .activities-cta-side {
+        min-height: 210px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .activities-page-hero h1 {
+        font-size: 36px;
+    }
+
+    .activities-intro-feature {
+        padding: 28px;
+    }
+
+    .sport-card {
+        padding: 28px;
+    }
+
+    .culture-card {
+        padding: 28px;
+    }
+
+    .learner-development-content h2 {
+        font-size: 36px;
+    }
+
+    .activities-cta-content {
+        padding: 35px 25px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 34px;
+    }
+
+    .activities-cta-buttons {
+        flex-direction: column;
+    }
+
+    .activities-cta-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+```css
+/* =========================================================
+   SPORT & CULTURE PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.activities-page-hero {
+    min-height: 570px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 31, 56, 0.94),
+            rgba(32, 84, 154, 0.76)
+        ),
+        url("../assets/images/school-hero.jpg") center/cover no-repeat;
+}
+
+.activities-page-hero .page-hero-content {
+    max-width: 900px;
+}
+
+.activities-page-hero .section-label {
+    color: var(--gold);
+}
+
+.activities-page-hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.03;
+
+    margin-bottom: 25px;
+}
+
+.activities-page-hero p {
+    max-width: 700px;
+
+    font-size: 18px;
+    line-height: 1.85;
+
+    color: rgba(255,255,255,0.84);
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.activities-intro {
+    background: var(--white);
+}
+
+.activities-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.activities-intro-content {
+    max-width: 700px;
+}
+
+.activities-intro-content h2 {
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.08;
+
+    margin: 12px 0 25px;
+}
+
+.activities-intro-content p {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* INTRO POINTS */
+
+.activities-intro-points {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.activities-intro-points div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.activities-intro-points strong {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+}
+
+.activities-intro-points span {
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* INTRO FEATURE */
+
+.activities-intro-feature {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            var(--blue-dark)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-intro-feature::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 50%;
+
+    top: -130px;
+    right: -100px;
+}
+
+.activities-intro-feature::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(213,179,77,0.20);
+
+    border-radius: 50%;
+
+    bottom: -90px;
+    left: -70px;
+}
+
+.feature-number {
+    position: relative;
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-content > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+    margin-bottom: 12px;
+}
+
+.feature-content h3 {
+    max-width: 440px;
+
+    font-size: 31px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.feature-content p {
+    max-width: 460px;
+
+    color: rgba(255,255,255,0.72);
+
+    line-height: 1.8;
+}
+
+.feature-word {
+    position: absolute;
+    z-index: 1;
+
+    right: -15px;
+    bottom: -18px;
+
+    color: rgba(255,255,255,0.035);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT SECTION
+   --------------------------------------------------------- */
+
+.sport-section {
+    background: var(--off-white);
+}
+
+.activities-heading {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: end;
+
+    margin-bottom: 50px;
+}
+
+.activities-heading h2 {
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+
+    margin-top: 12px;
+}
+
+.activities-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT CARDS
+   --------------------------------------------------------- */
+
+.sport-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sport-card {
+    position: relative;
+
+    min-height: 410px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-9px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* CARD BACKGROUNDS */
+
+.sport-athletics {
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+}
+
+.sport-soccer {
+    background:
+        linear-gradient(
+            145deg,
+            var(--red),
+            #702229
+        );
+}
+
+.sport-netball {
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            #183f6e
+        );
+}
+
+.sport-chess {
+    background:
+        linear-gradient(
+            145deg,
+            #8b7023,
+            var(--gold)
+        );
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.sport-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    right: -80px;
+    bottom: -80px;
+}
+
+
+/* TOP */
+
+.sport-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+.sport-number {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: rgba(255,255,255,0.72);
+}
+
+.sport-category {
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(255,255,255,0.62);
+}
+
+
+/* CONTENT */
+
+.sport-card-content {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+}
+
+.sport-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 15px;
+
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sport-card h3 {
+    font-size: 27px;
+
+    margin-bottom: 13px;
+}
+
+.sport-card p {
+    color: rgba(255,255,255,0.76);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+.afrikaans-tag {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50px;
+
+    color: rgba(255,255,255,0.9);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   CULTURE SECTION
+   --------------------------------------------------------- */
+
+.culture-section {
+    background: var(--white);
+}
+
+.culture-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.culture-heading {
+    position: sticky;
+
+    top: 120px;
+}
+
+.culture-heading h2 {
+    font-size: clamp(37px, 4vw, 54px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.culture-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+
+/* CULTURE QUOTE */
+
+.culture-quote {
+    margin-top: 35px;
+
+    padding: 25px 30px;
+
+    border-left: 4px solid var(--gold);
+
+    background: var(--light-blue);
+}
+
+.culture-quote > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+    line-height: 0.6;
+
+    margin-bottom: 15px;
+}
+
+.culture-quote p {
+    color: var(--blue-dark);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 0;
+}
+
+
+/* CULTURE GRID */
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.culture-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background: var(--off-white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+.culture-card:nth-child(2) {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(3) {
+    background: var(--blue);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(4) {
+    background: #f8f3e4;
+}
+
+.culture-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border: 1px solid rgba(32,84,154,0.1);
+
+    border-radius: 50%;
+
+    right: -50px;
+    top: -50px;
+}
+
+.culture-card:nth-child(2)::after,
+.culture-card:nth-child(3)::after {
+    border-color: rgba(255,255,255,0.10);
+}
+
+.culture-card-number {
+    position: absolute;
+
+    top: 28px;
+    left: 32px;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.culture-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.culture-card p {
+    position: relative;
+    z-index: 2;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.culture-card:nth-child(2) p,
+.culture-card:nth-child(3) p {
+    color: rgba(255,255,255,0.72);
+}
+
+.culture-card > span:last-child {
+    position: relative;
+    z-index: 2;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+}
+
+.culture-card:nth-child(2) > span:last-child,
+.culture-card:nth-child(3) > span:last-child {
+    color: var(--gold);
+}
+
+
+/* ---------------------------------------------------------
+   LEARNER DEVELOPMENT
+   --------------------------------------------------------- */
+
+.learner-development {
+    background: var(--off-white);
+}
+
+.learner-development-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.learner-development-content h2 {
+    font-size: clamp(37px, 4vw, 53px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.learner-development-content p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    margin-bottom: 28px;
+}
+
+
+/* DEVELOPMENT LIST */
+
+.development-list {
+    border-top: 1px solid var(--border);
+}
+
+.development-item {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.development-item > span {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.development-item h3 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.development-item p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CTA
+   --------------------------------------------------------- */
+
+.activities-cta {
+    padding-top: 30px;
+
+    background: var(--off-white);
+}
+
+.activities-cta-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.35fr;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-cta-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 65px;
+}
+
+.activities-cta-content .section-label {
+    color: var(--gold);
+}
+
+.activities-cta-content h2 {
+    max-width: 600px;
+
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.08;
+
+    margin: 14px 0 20px;
+}
+
+.activities-cta-content > p {
+    max-width: 620px;
+
+    color: rgba(255,255,255,0.76);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* CTA BUTTONS */
+
+.activities-cta-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.activities-cta-buttons .btn-primary {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+.activities-cta-buttons .btn-primary:hover {
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+.activities-cta-buttons .btn-outline {
+    color: var(--white);
+
+    border-color: rgba(255,255,255,0.5);
+}
+
+.activities-cta-buttons .btn-outline:hover {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+
+/* CTA SIDE */
+
+.activities-cta-side {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(7,31,56,0.38);
+
+    text-align: center;
+}
+
+.activities-cta-side::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border: 1px solid rgba(213,179,77,0.25);
+
+    border-radius: 50%;
+}
+
+.activities-cta-side span {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.activities-cta-side strong {
+    position: relative;
+    z-index: 2;
+
+    margin: 10px 0;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 42px;
+    letter-spacing: 0.05em;
+}
+
+.activities-cta-side p {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.7);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sport-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+    .activities-intro-grid {
+        gap: 50px;
+    }
+
+    .culture-layout {
+        gap: 50px;
+    }
+
+    .learner-development-grid {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .activities-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-intro-feature {
+        min-height: 350px;
+    }
+
+    .activities-heading {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .culture-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-heading {
+        position: static;
+
+        max-width: 750px;
+    }
+
+    .learner-development-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learner-development-content {
+        max-width: 700px;
+    }
+
+    .activities-cta-box {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-cta-side {
+        min-height: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .activities-page-hero {
+        min-height: 510px;
+    }
+
+    .activities-page-hero h1 {
+        font-size: 42px;
+    }
+
+    .activities-page-hero p {
+        font-size: 16px;
+    }
+
+
+    /* Intro */
+
+    .activities-intro-grid {
+        gap: 35px;
+    }
+
+    .activities-intro-feature {
+        padding: 32px;
+
+        min-height: 350px;
+    }
+
+    .feature-content h3 {
+        font-size: 27px;
+    }
+
+    .feature-word {
+        font-size: 75px;
+    }
+
+
+    /* Points */
+
+    .activities-intro-points {
+        gap: 25px;
+    }
+
+
+    /* Sport */
+
+    .sport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+
+    /* Culture */
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card {
+        min-height: 260px;
+    }
+
+
+    /* Development */
+
+    .development-item {
+        grid-template-columns: 45px 1fr;
+    }
+
+
+    /* CTA */
+
+    .activities-cta-content {
+        padding: 42px 30px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .activities-cta-side {
+        min-height: 210px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .activities-page-hero h1 {
+        font-size: 36px;
+    }
+
+    .activities-intro-feature {
+        padding: 28px;
+    }
+
+    .sport-card {
+        padding: 28px;
+    }
+
+    .culture-card {
+        padding: 28px;
+    }
+
+    .learner-development-content h2 {
+        font-size: 36px;
+    }
+
+    .activities-cta-content {
+        padding: 35px 25px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 34px;
+    }
+
+    .activities-cta-buttons {
+        flex-direction: column;
+    }
+
+    .activities-cta-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+```css
+/* =========================================================
+   SPORT & CULTURE PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.activities-page-hero {
+    min-height: 570px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 31, 56, 0.94),
+            rgba(32, 84, 154, 0.76)
+        ),
+        url("../assets/images/school-hero.jpg") center/cover no-repeat;
+}
+
+.activities-page-hero .page-hero-content {
+    max-width: 900px;
+}
+
+.activities-page-hero .section-label {
+    color: var(--gold);
+}
+
+.activities-page-hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.03;
+
+    margin-bottom: 25px;
+}
+
+.activities-page-hero p {
+    max-width: 700px;
+
+    font-size: 18px;
+    line-height: 1.85;
+
+    color: rgba(255,255,255,0.84);
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.activities-intro {
+    background: var(--white);
+}
+
+.activities-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.activities-intro-content {
+    max-width: 700px;
+}
+
+.activities-intro-content h2 {
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.08;
+
+    margin: 12px 0 25px;
+}
+
+.activities-intro-content p {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* INTRO POINTS */
+
+.activities-intro-points {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.activities-intro-points div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.activities-intro-points strong {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+}
+
+.activities-intro-points span {
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* INTRO FEATURE */
+
+.activities-intro-feature {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            var(--blue-dark)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-intro-feature::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 50%;
+
+    top: -130px;
+    right: -100px;
+}
+
+.activities-intro-feature::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(213,179,77,0.20);
+
+    border-radius: 50%;
+
+    bottom: -90px;
+    left: -70px;
+}
+
+.feature-number {
+    position: relative;
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-content > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+    margin-bottom: 12px;
+}
+
+.feature-content h3 {
+    max-width: 440px;
+
+    font-size: 31px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.feature-content p {
+    max-width: 460px;
+
+    color: rgba(255,255,255,0.72);
+
+    line-height: 1.8;
+}
+
+.feature-word {
+    position: absolute;
+    z-index: 1;
+
+    right: -15px;
+    bottom: -18px;
+
+    color: rgba(255,255,255,0.035);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT SECTION
+   --------------------------------------------------------- */
+
+.sport-section {
+    background: var(--off-white);
+}
+
+.activities-heading {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: end;
+
+    margin-bottom: 50px;
+}
+
+.activities-heading h2 {
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+
+    margin-top: 12px;
+}
+
+.activities-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT CARDS
+   --------------------------------------------------------- */
+
+.sport-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sport-card {
+    position: relative;
+
+    min-height: 410px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-9px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* CARD BACKGROUNDS */
+
+.sport-athletics {
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+}
+
+.sport-soccer {
+    background:
+        linear-gradient(
+            145deg,
+            var(--red),
+            #702229
+        );
+}
+
+.sport-netball {
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            #183f6e
+        );
+}
+
+.sport-chess {
+    background:
+        linear-gradient(
+            145deg,
+            #8b7023,
+            var(--gold)
+        );
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.sport-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    right: -80px;
+    bottom: -80px;
+}
+
+
+/* TOP */
+
+.sport-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+.sport-number {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: rgba(255,255,255,0.72);
+}
+
+.sport-category {
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(255,255,255,0.62);
+}
+
+
+/* CONTENT */
+
+.sport-card-content {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+}
+
+.sport-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 15px;
+
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sport-card h3 {
+    font-size: 27px;
+
+    margin-bottom: 13px;
+}
+
+.sport-card p {
+    color: rgba(255,255,255,0.76);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+.afrikaans-tag {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50px;
+
+    color: rgba(255,255,255,0.9);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   CULTURE SECTION
+   --------------------------------------------------------- */
+
+.culture-section {
+    background: var(--white);
+}
+
+.culture-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.culture-heading {
+    position: sticky;
+
+    top: 120px;
+}
+
+.culture-heading h2 {
+    font-size: clamp(37px, 4vw, 54px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.culture-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+
+/* CULTURE QUOTE */
+
+.culture-quote {
+    margin-top: 35px;
+
+    padding: 25px 30px;
+
+    border-left: 4px solid var(--gold);
+
+    background: var(--light-blue);
+}
+
+.culture-quote > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+    line-height: 0.6;
+
+    margin-bottom: 15px;
+}
+
+.culture-quote p {
+    color: var(--blue-dark);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 0;
+}
+
+
+/* CULTURE GRID */
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.culture-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background: var(--off-white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+.culture-card:nth-child(2) {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(3) {
+    background: var(--blue);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(4) {
+    background: #f8f3e4;
+}
+
+.culture-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border: 1px solid rgba(32,84,154,0.1);
+
+    border-radius: 50%;
+
+    right: -50px;
+    top: -50px;
+}
+
+.culture-card:nth-child(2)::after,
+.culture-card:nth-child(3)::after {
+    border-color: rgba(255,255,255,0.10);
+}
+
+.culture-card-number {
+    position: absolute;
+
+    top: 28px;
+    left: 32px;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.culture-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.culture-card p {
+    position: relative;
+    z-index: 2;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.culture-card:nth-child(2) p,
+.culture-card:nth-child(3) p {
+    color: rgba(255,255,255,0.72);
+}
+
+.culture-card > span:last-child {
+    position: relative;
+    z-index: 2;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+}
+
+.culture-card:nth-child(2) > span:last-child,
+.culture-card:nth-child(3) > span:last-child {
+    color: var(--gold);
+}
+
+
+/* ---------------------------------------------------------
+   LEARNER DEVELOPMENT
+   --------------------------------------------------------- */
+
+.learner-development {
+    background: var(--off-white);
+}
+
+.learner-development-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.learner-development-content h2 {
+    font-size: clamp(37px, 4vw, 53px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.learner-development-content p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    margin-bottom: 28px;
+}
+
+
+/* DEVELOPMENT LIST */
+
+.development-list {
+    border-top: 1px solid var(--border);
+}
+
+.development-item {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.development-item > span {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.development-item h3 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.development-item p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CTA
+   --------------------------------------------------------- */
+
+.activities-cta {
+    padding-top: 30px;
+
+    background: var(--off-white);
+}
+
+.activities-cta-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.35fr;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-cta-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 65px;
+}
+
+.activities-cta-content .section-label {
+    color: var(--gold);
+}
+
+.activities-cta-content h2 {
+    max-width: 600px;
+
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.08;
+
+    margin: 14px 0 20px;
+}
+
+.activities-cta-content > p {
+    max-width: 620px;
+
+    color: rgba(255,255,255,0.76);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* CTA BUTTONS */
+
+.activities-cta-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.activities-cta-buttons .btn-primary {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+.activities-cta-buttons .btn-primary:hover {
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+.activities-cta-buttons .btn-outline {
+    color: var(--white);
+
+    border-color: rgba(255,255,255,0.5);
+}
+
+.activities-cta-buttons .btn-outline:hover {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+
+/* CTA SIDE */
+
+.activities-cta-side {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(7,31,56,0.38);
+
+    text-align: center;
+}
+
+.activities-cta-side::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border: 1px solid rgba(213,179,77,0.25);
+
+    border-radius: 50%;
+}
+
+.activities-cta-side span {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.activities-cta-side strong {
+    position: relative;
+    z-index: 2;
+
+    margin: 10px 0;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 42px;
+    letter-spacing: 0.05em;
+}
+
+.activities-cta-side p {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.7);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sport-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+    .activities-intro-grid {
+        gap: 50px;
+    }
+
+    .culture-layout {
+        gap: 50px;
+    }
+
+    .learner-development-grid {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .activities-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-intro-feature {
+        min-height: 350px;
+    }
+
+    .activities-heading {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .culture-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-heading {
+        position: static;
+
+        max-width: 750px;
+    }
+
+    .learner-development-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learner-development-content {
+        max-width: 700px;
+    }
+
+    .activities-cta-box {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-cta-side {
+        min-height: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .activities-page-hero {
+        min-height: 510px;
+    }
+
+    .activities-page-hero h1 {
+        font-size: 42px;
+    }
+
+    .activities-page-hero p {
+        font-size: 16px;
+    }
+
+
+    /* Intro */
+
+    .activities-intro-grid {
+        gap: 35px;
+    }
+
+    .activities-intro-feature {
+        padding: 32px;
+
+        min-height: 350px;
+    }
+
+    .feature-content h3 {
+        font-size: 27px;
+    }
+
+    .feature-word {
+        font-size: 75px;
+    }
+
+
+    /* Points */
+
+    .activities-intro-points {
+        gap: 25px;
+    }
+
+
+    /* Sport */
+
+    .sport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+
+    /* Culture */
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card {
+        min-height: 260px;
+    }
+
+
+    /* Development */
+
+    .development-item {
+        grid-template-columns: 45px 1fr;
+    }
+
+
+    /* CTA */
+
+    .activities-cta-content {
+        padding: 42px 30px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .activities-cta-side {
+        min-height: 210px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .activities-page-hero h1 {
+        font-size: 36px;
+    }
+
+    .activities-intro-feature {
+        padding: 28px;
+    }
+
+    .sport-card {
+        padding: 28px;
+    }
+
+    .culture-card {
+        padding: 28px;
+    }
+
+    .learner-development-content h2 {
+        font-size: 36px;
+    }
+
+    .activities-cta-content {
+        padding: 35px 25px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 34px;
+    }
+
+    .activities-cta-buttons {
+        flex-direction: column;
+    }
+
+    .activities-cta-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+```css
+/* =========================================================
+   SPORT & CULTURE PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.activities-page-hero {
+    min-height: 570px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 31, 56, 0.94),
+            rgba(32, 84, 154, 0.76)
+        ),
+        url("../assets/images/school-hero.jpg") center/cover no-repeat;
+}
+
+.activities-page-hero .page-hero-content {
+    max-width: 900px;
+}
+
+.activities-page-hero .section-label {
+    color: var(--gold);
+}
+
+.activities-page-hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.03;
+
+    margin-bottom: 25px;
+}
+
+.activities-page-hero p {
+    max-width: 700px;
+
+    font-size: 18px;
+    line-height: 1.85;
+
+    color: rgba(255,255,255,0.84);
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.activities-intro {
+    background: var(--white);
+}
+
+.activities-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.activities-intro-content {
+    max-width: 700px;
+}
+
+.activities-intro-content h2 {
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.08;
+
+    margin: 12px 0 25px;
+}
+
+.activities-intro-content p {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* INTRO POINTS */
+
+.activities-intro-points {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.activities-intro-points div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.activities-intro-points strong {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+}
+
+.activities-intro-points span {
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* INTRO FEATURE */
+
+.activities-intro-feature {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            var(--blue-dark)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-intro-feature::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 50%;
+
+    top: -130px;
+    right: -100px;
+}
+
+.activities-intro-feature::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(213,179,77,0.20);
+
+    border-radius: 50%;
+
+    bottom: -90px;
+    left: -70px;
+}
+
+.feature-number {
+    position: relative;
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-content > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+    margin-bottom: 12px;
+}
+
+.feature-content h3 {
+    max-width: 440px;
+
+    font-size: 31px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.feature-content p {
+    max-width: 460px;
+
+    color: rgba(255,255,255,0.72);
+
+    line-height: 1.8;
+}
+
+.feature-word {
+    position: absolute;
+    z-index: 1;
+
+    right: -15px;
+    bottom: -18px;
+
+    color: rgba(255,255,255,0.035);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT SECTION
+   --------------------------------------------------------- */
+
+.sport-section {
+    background: var(--off-white);
+}
+
+.activities-heading {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: end;
+
+    margin-bottom: 50px;
+}
+
+.activities-heading h2 {
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+
+    margin-top: 12px;
+}
+
+.activities-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT CARDS
+   --------------------------------------------------------- */
+
+.sport-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sport-card {
+    position: relative;
+
+    min-height: 410px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-9px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* CARD BACKGROUNDS */
+
+.sport-athletics {
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+}
+
+.sport-soccer {
+    background:
+        linear-gradient(
+            145deg,
+            var(--red),
+            #702229
+        );
+}
+
+.sport-netball {
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            #183f6e
+        );
+}
+
+.sport-chess {
+    background:
+        linear-gradient(
+            145deg,
+            #8b7023,
+            var(--gold)
+        );
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.sport-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    right: -80px;
+    bottom: -80px;
+}
+
+
+/* TOP */
+
+.sport-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+.sport-number {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: rgba(255,255,255,0.72);
+}
+
+.sport-category {
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(255,255,255,0.62);
+}
+
+
+/* CONTENT */
+
+.sport-card-content {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+}
+
+.sport-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 15px;
+
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sport-card h3 {
+    font-size: 27px;
+
+    margin-bottom: 13px;
+}
+
+.sport-card p {
+    color: rgba(255,255,255,0.76);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+.afrikaans-tag {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50px;
+
+    color: rgba(255,255,255,0.9);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   CULTURE SECTION
+   --------------------------------------------------------- */
+
+.culture-section {
+    background: var(--white);
+}
+
+.culture-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.culture-heading {
+    position: sticky;
+
+    top: 120px;
+}
+
+.culture-heading h2 {
+    font-size: clamp(37px, 4vw, 54px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.culture-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+
+/* CULTURE QUOTE */
+
+.culture-quote {
+    margin-top: 35px;
+
+    padding: 25px 30px;
+
+    border-left: 4px solid var(--gold);
+
+    background: var(--light-blue);
+}
+
+.culture-quote > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+    line-height: 0.6;
+
+    margin-bottom: 15px;
+}
+
+.culture-quote p {
+    color: var(--blue-dark);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 0;
+}
+
+
+/* CULTURE GRID */
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.culture-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background: var(--off-white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+.culture-card:nth-child(2) {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(3) {
+    background: var(--blue);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(4) {
+    background: #f8f3e4;
+}
+
+.culture-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border: 1px solid rgba(32,84,154,0.1);
+
+    border-radius: 50%;
+
+    right: -50px;
+    top: -50px;
+}
+
+.culture-card:nth-child(2)::after,
+.culture-card:nth-child(3)::after {
+    border-color: rgba(255,255,255,0.10);
+}
+
+.culture-card-number {
+    position: absolute;
+
+    top: 28px;
+    left: 32px;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.culture-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.culture-card p {
+    position: relative;
+    z-index: 2;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.culture-card:nth-child(2) p,
+.culture-card:nth-child(3) p {
+    color: rgba(255,255,255,0.72);
+}
+
+.culture-card > span:last-child {
+    position: relative;
+    z-index: 2;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+}
+
+.culture-card:nth-child(2) > span:last-child,
+.culture-card:nth-child(3) > span:last-child {
+    color: var(--gold);
+}
+
+
+/* ---------------------------------------------------------
+   LEARNER DEVELOPMENT
+   --------------------------------------------------------- */
+
+.learner-development {
+    background: var(--off-white);
+}
+
+.learner-development-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.learner-development-content h2 {
+    font-size: clamp(37px, 4vw, 53px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.learner-development-content p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    margin-bottom: 28px;
+}
+
+
+/* DEVELOPMENT LIST */
+
+.development-list {
+    border-top: 1px solid var(--border);
+}
+
+.development-item {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.development-item > span {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.development-item h3 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.development-item p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CTA
+   --------------------------------------------------------- */
+
+.activities-cta {
+    padding-top: 30px;
+
+    background: var(--off-white);
+}
+
+.activities-cta-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.35fr;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-cta-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 65px;
+}
+
+.activities-cta-content .section-label {
+    color: var(--gold);
+}
+
+.activities-cta-content h2 {
+    max-width: 600px;
+
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.08;
+
+    margin: 14px 0 20px;
+}
+
+.activities-cta-content > p {
+    max-width: 620px;
+
+    color: rgba(255,255,255,0.76);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* CTA BUTTONS */
+
+.activities-cta-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.activities-cta-buttons .btn-primary {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+.activities-cta-buttons .btn-primary:hover {
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+.activities-cta-buttons .btn-outline {
+    color: var(--white);
+
+    border-color: rgba(255,255,255,0.5);
+}
+
+.activities-cta-buttons .btn-outline:hover {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+
+/* CTA SIDE */
+
+.activities-cta-side {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(7,31,56,0.38);
+
+    text-align: center;
+}
+
+.activities-cta-side::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border: 1px solid rgba(213,179,77,0.25);
+
+    border-radius: 50%;
+}
+
+.activities-cta-side span {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.activities-cta-side strong {
+    position: relative;
+    z-index: 2;
+
+    margin: 10px 0;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 42px;
+    letter-spacing: 0.05em;
+}
+
+.activities-cta-side p {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.7);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sport-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+    .activities-intro-grid {
+        gap: 50px;
+    }
+
+    .culture-layout {
+        gap: 50px;
+    }
+
+    .learner-development-grid {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .activities-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-intro-feature {
+        min-height: 350px;
+    }
+
+    .activities-heading {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .culture-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-heading {
+        position: static;
+
+        max-width: 750px;
+    }
+
+    .learner-development-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learner-development-content {
+        max-width: 700px;
+    }
+
+    .activities-cta-box {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-cta-side {
+        min-height: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .activities-page-hero {
+        min-height: 510px;
+    }
+
+    .activities-page-hero h1 {
+        font-size: 42px;
+    }
+
+    .activities-page-hero p {
+        font-size: 16px;
+    }
+
+
+    /* Intro */
+
+    .activities-intro-grid {
+        gap: 35px;
+    }
+
+    .activities-intro-feature {
+        padding: 32px;
+
+        min-height: 350px;
+    }
+
+    .feature-content h3 {
+        font-size: 27px;
+    }
+
+    .feature-word {
+        font-size: 75px;
+    }
+
+
+    /* Points */
+
+    .activities-intro-points {
+        gap: 25px;
+    }
+
+
+    /* Sport */
+
+    .sport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+
+    /* Culture */
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card {
+        min-height: 260px;
+    }
+
+
+    /* Development */
+
+    .development-item {
+        grid-template-columns: 45px 1fr;
+    }
+
+
+    /* CTA */
+
+    .activities-cta-content {
+        padding: 42px 30px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .activities-cta-side {
+        min-height: 210px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .activities-page-hero h1 {
+        font-size: 36px;
+    }
+
+    .activities-intro-feature {
+        padding: 28px;
+    }
+
+    .sport-card {
+        padding: 28px;
+    }
+
+    .culture-card {
+        padding: 28px;
+    }
+
+    .learner-development-content h2 {
+        font-size: 36px;
+    }
+
+    .activities-cta-content {
+        padding: 35px 25px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 34px;
+    }
+
+    .activities-cta-buttons {
+        flex-direction: column;
+    }
+
+    .activities-cta-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+```css
+/* =========================================================
+   SPORT & CULTURE PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.activities-page-hero {
+    min-height: 570px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 31, 56, 0.94),
+            rgba(32, 84, 154, 0.76)
+        ),
+        url("../assets/images/school-hero.jpg") center/cover no-repeat;
+}
+
+.activities-page-hero .page-hero-content {
+    max-width: 900px;
+}
+
+.activities-page-hero .section-label {
+    color: var(--gold);
+}
+
+.activities-page-hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.03;
+
+    margin-bottom: 25px;
+}
+
+.activities-page-hero p {
+    max-width: 700px;
+
+    font-size: 18px;
+    line-height: 1.85;
+
+    color: rgba(255,255,255,0.84);
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.activities-intro {
+    background: var(--white);
+}
+
+.activities-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.activities-intro-content {
+    max-width: 700px;
+}
+
+.activities-intro-content h2 {
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.08;
+
+    margin: 12px 0 25px;
+}
+
+.activities-intro-content p {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* INTRO POINTS */
+
+.activities-intro-points {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.activities-intro-points div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.activities-intro-points strong {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+}
+
+.activities-intro-points span {
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* INTRO FEATURE */
+
+.activities-intro-feature {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            var(--blue-dark)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-intro-feature::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 50%;
+
+    top: -130px;
+    right: -100px;
+}
+
+.activities-intro-feature::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(213,179,77,0.20);
+
+    border-radius: 50%;
+
+    bottom: -90px;
+    left: -70px;
+}
+
+.feature-number {
+    position: relative;
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-content > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+    margin-bottom: 12px;
+}
+
+.feature-content h3 {
+    max-width: 440px;
+
+    font-size: 31px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.feature-content p {
+    max-width: 460px;
+
+    color: rgba(255,255,255,0.72);
+
+    line-height: 1.8;
+}
+
+.feature-word {
+    position: absolute;
+    z-index: 1;
+
+    right: -15px;
+    bottom: -18px;
+
+    color: rgba(255,255,255,0.035);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT SECTION
+   --------------------------------------------------------- */
+
+.sport-section {
+    background: var(--off-white);
+}
+
+.activities-heading {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: end;
+
+    margin-bottom: 50px;
+}
+
+.activities-heading h2 {
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+
+    margin-top: 12px;
+}
+
+.activities-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SPORT CARDS
+   --------------------------------------------------------- */
+
+.sport-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sport-card {
+    position: relative;
+
+    min-height: 410px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-9px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* CARD BACKGROUNDS */
+
+.sport-athletics {
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+}
+
+.sport-soccer {
+    background:
+        linear-gradient(
+            145deg,
+            var(--red),
+            #702229
+        );
+}
+
+.sport-netball {
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            #183f6e
+        );
+}
+
+.sport-chess {
+    background:
+        linear-gradient(
+            145deg,
+            #8b7023,
+            var(--gold)
+        );
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.sport-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    right: -80px;
+    bottom: -80px;
+}
+
+
+/* TOP */
+
+.sport-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+.sport-number {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: rgba(255,255,255,0.72);
+}
+
+.sport-category {
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(255,255,255,0.62);
+}
+
+
+/* CONTENT */
+
+.sport-card-content {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+}
+
+.sport-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 15px;
+
+    color: var(--white);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sport-card h3 {
+    font-size: 27px;
+
+    margin-bottom: 13px;
+}
+
+.sport-card p {
+    color: rgba(255,255,255,0.76);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+.afrikaans-tag {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50px;
+
+    color: rgba(255,255,255,0.9);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   CULTURE SECTION
+   --------------------------------------------------------- */
+
+.culture-section {
+    background: var(--white);
+}
+
+.culture-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.culture-heading {
+    position: sticky;
+
+    top: 120px;
+}
+
+.culture-heading h2 {
+    font-size: clamp(37px, 4vw, 54px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.culture-heading > p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+
+/* CULTURE QUOTE */
+
+.culture-quote {
+    margin-top: 35px;
+
+    padding: 25px 30px;
+
+    border-left: 4px solid var(--gold);
+
+    background: var(--light-blue);
+}
+
+.culture-quote > span {
+    display: block;
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+    line-height: 0.6;
+
+    margin-bottom: 15px;
+}
+
+.culture-quote p {
+    color: var(--blue-dark);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 0;
+}
+
+
+/* CULTURE GRID */
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.culture-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background: var(--off-white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+.culture-card:nth-child(2) {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(3) {
+    background: var(--blue);
+
+    color: var(--white);
+}
+
+.culture-card:nth-child(4) {
+    background: #f8f3e4;
+}
+
+.culture-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border: 1px solid rgba(32,84,154,0.1);
+
+    border-radius: 50%;
+
+    right: -50px;
+    top: -50px;
+}
+
+.culture-card:nth-child(2)::after,
+.culture-card:nth-child(3)::after {
+    border-color: rgba(255,255,255,0.10);
+}
+
+.culture-card-number {
+    position: absolute;
+
+    top: 28px;
+    left: 32px;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.culture-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.culture-card p {
+    position: relative;
+    z-index: 2;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.culture-card:nth-child(2) p,
+.culture-card:nth-child(3) p {
+    color: rgba(255,255,255,0.72);
+}
+
+.culture-card > span:last-child {
+    position: relative;
+    z-index: 2;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+}
+
+.culture-card:nth-child(2) > span:last-child,
+.culture-card:nth-child(3) > span:last-child {
+    color: var(--gold);
+}
+
+
+/* ---------------------------------------------------------
+   LEARNER DEVELOPMENT
+   --------------------------------------------------------- */
+
+.learner-development {
+    background: var(--off-white);
+}
+
+.learner-development-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.learner-development-content h2 {
+    font-size: clamp(37px, 4vw, 53px);
+    line-height: 1.08;
+
+    margin: 12px 0 22px;
+}
+
+.learner-development-content p {
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    margin-bottom: 28px;
+}
+
+
+/* DEVELOPMENT LIST */
+
+.development-list {
+    border-top: 1px solid var(--border);
+}
+
+.development-item {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.development-item > span {
+    color: var(--blue);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.development-item h3 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.development-item p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CTA
+   --------------------------------------------------------- */
+
+.activities-cta {
+    padding-top: 30px;
+
+    background: var(--off-white);
+}
+
+.activities-cta-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.35fr;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--blue)
+        );
+
+    border-radius: var(--radius);
+
+    color: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.activities-cta-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 65px;
+}
+
+.activities-cta-content .section-label {
+    color: var(--gold);
+}
+
+.activities-cta-content h2 {
+    max-width: 600px;
+
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.08;
+
+    margin: 14px 0 20px;
+}
+
+.activities-cta-content > p {
+    max-width: 620px;
+
+    color: rgba(255,255,255,0.76);
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* CTA BUTTONS */
+
+.activities-cta-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.activities-cta-buttons .btn-primary {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+.activities-cta-buttons .btn-primary:hover {
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+.activities-cta-buttons .btn-outline {
+    color: var(--white);
+
+    border-color: rgba(255,255,255,0.5);
+}
+
+.activities-cta-buttons .btn-outline:hover {
+    background: var(--white);
+
+    color: var(--blue-dark);
+}
+
+
+/* CTA SIDE */
+
+.activities-cta-side {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(7,31,56,0.38);
+
+    text-align: center;
+}
+
+.activities-cta-side::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border: 1px solid rgba(213,179,77,0.25);
+
+    border-radius: 50%;
+}
+
+.activities-cta-side span {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.activities-cta-side strong {
+    position: relative;
+    z-index: 2;
+
+    margin: 10px 0;
+
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 42px;
+    letter-spacing: 0.05em;
+}
+
+.activities-cta-side p {
+    position: relative;
+    z-index: 2;
+
+    color: rgba(255,255,255,0.7);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sport-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+    .activities-intro-grid {
+        gap: 50px;
+    }
+
+    .culture-layout {
+        gap: 50px;
+    }
+
+    .learner-development-grid {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .activities-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-intro-feature {
+        min-height: 350px;
+    }
+
+    .activities-heading {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .culture-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-heading {
+        position: static;
+
+        max-width: 750px;
+    }
+
+    .learner-development-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learner-development-content {
+        max-width: 700px;
+    }
+
+    .activities-cta-box {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-cta-side {
+        min-height: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .activities-page-hero {
+        min-height: 510px;
+    }
+
+    .activities-page-hero h1 {
+        font-size: 42px;
+    }
+
+    .activities-page-hero p {
+        font-size: 16px;
+    }
+
+
+    /* Intro */
+
+    .activities-intro-grid {
+        gap: 35px;
+    }
+
+    .activities-intro-feature {
+        padding: 32px;
+
+        min-height: 350px;
+    }
+
+    .feature-content h3 {
+        font-size: 27px;
+    }
+
+    .feature-word {
+        font-size: 75px;
+    }
+
+
+    /* Points */
+
+    .activities-intro-points {
+        gap: 25px;
+    }
+
+
+    /* Sport */
+
+    .sport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-card {
+        min-height: 360px;
+    }
+
+
+    /* Culture */
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card {
+        min-height: 260px;
+    }
+
+
+    /* Development */
+
+    .development-item {
+        grid-template-columns: 45px 1fr;
+    }
+
+
+    /* CTA */
+
+    .activities-cta-content {
+        padding: 42px 30px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .activities-cta-side {
+        min-height: 210px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .activities-page-hero h1 {
+        font-size: 36px;
+    }
+
+    .activities-intro-feature {
+        padding: 28px;
+    }
+
+    .sport-card {
+        padding: 28px;
+    }
+
+    .culture-card {
+        padding: 28px;
+    }
+
+    .learner-development-content h2 {
+        font-size: 36px;
+    }
+
+    .activities-cta-content {
+        padding: 35px 25px;
+    }
+
+    .activities-cta-content h2 {
+        font-size: 34px;
+    }
+
+    .activities-cta-buttons {
+        flex-direction: column;
+    }
+
+    .activities-cta-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}

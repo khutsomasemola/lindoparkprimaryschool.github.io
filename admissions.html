@@ -1,0 +1,3105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admissions | Laerskool LindoPark</title>
+
+    <meta
+        name="description"
+        content="Admissions information for Laerskool LindoPark. Explore the application journey, prepare your documents and contact the school."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================================
+           ADMISSIONS PAGE
+        ========================================================= */
+
+        html {
+            width: 100%;
+            min-height: 100%;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            position: relative;
+        }
+
+        body.menu-open {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            position: relative !important;
+        }
+
+        /* =========================================================
+           MOBILE MENU — SCROLL SAFE
+        ========================================================= */
+
+        .mobile-overlay {
+            position: fixed !important;
+            inset: 0 !important;
+            z-index: 9997 !important;
+            background: rgba(5, 18, 31, .55);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition:
+                opacity .3s ease,
+                visibility .3s ease;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .mobile-sidebar {
+            position: fixed !important;
+            top: 0 !important;
+            right: 0 !important;
+            width: min(390px, 88vw) !important;
+            height: 100vh !important;
+            height: 100dvh !important;
+            z-index: 9998 !important;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            -webkit-overflow-scrolling: touch;
+            background: #fff;
+
+            transform: translateX(105%);
+            visibility: hidden;
+
+            transition:
+                transform .35s cubic-bezier(.77,0,.18,1),
+                visibility .35s ease;
+        }
+
+        .mobile-sidebar.active {
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        /* =========================================================
+           ADMISSION HERO
+        ========================================================= */
+
+        .admission-hero {
+            position: relative;
+            min-height: 680px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            background: var(--navy);
+        }
+
+        .admission-hero-image {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(8, 28, 48, .88) 0%,
+                    rgba(8, 28, 48, .68) 42%,
+                    rgba(8, 28, 48, .18) 100%
+                ),
+                url("assets/hero-2.jpg");
+
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.02);
+        }
+
+        .admission-hero-content {
+            position: relative;
+            z-index: 2;
+            width: min(1180px, calc(100% - 50px));
+            margin: 0 auto;
+            padding: 150px 0 85px;
+            color: #fff;
+        }
+
+        .admission-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .admission-eyebrow::before {
+            content: "";
+            width: 42px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .admission-hero h1 {
+            max-width: 760px;
+            margin: 0 0 24px;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: .98;
+            letter-spacing: -.055em;
+            font-weight: 800;
+        }
+
+        .admission-hero h1 span {
+            color: #e4c96c;
+        }
+
+        .admission-hero-text {
+            max-width: 650px;
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255,255,255,.86);
+        }
+
+        .admission-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 34px;
+        }
+
+        .admission-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 0 24px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .04em;
+            transition: .25s ease;
+        }
+
+        .admission-btn-primary {
+            background: #fff;
+            color: var(--navy);
+        }
+
+        .admission-btn-primary:hover {
+            background: var(--gold);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .admission-btn-outline {
+            border: 1px solid rgba(255,255,255,.45);
+            color: #fff;
+            background: rgba(255,255,255,.06);
+        }
+
+        .admission-btn-outline:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,.13);
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .admission-intro {
+            padding: 105px 25px;
+            background: var(--cream);
+        }
+
+        .admission-container {
+            width: min(1180px, 100%);
+            margin: 0 auto;
+        }
+
+        .admission-intro-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .section-label {
+            margin: 0 0 16px;
+            color: var(--red);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .section-heading {
+            margin: 0;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(34px, 4vw, 56px);
+            line-height: 1.05;
+            letter-spacing: -.045em;
+            font-weight: 800;
+        }
+
+        .admission-intro-copy p {
+            margin: 0 0 22px;
+            color: var(--grey);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .admission-intro-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =========================================================
+           QUICK INFO STRIP
+        ========================================================= */
+
+        .admission-info-strip {
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .admission-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .admission-info-card {
+            min-height: 150px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-right: 1px solid var(--line);
+        }
+
+        .admission-info-card:last-child {
+            border-right: none;
+        }
+
+        .info-icon {
+            width: 52px;
+            height: 52px;
+            flex: 0 0 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(16,43,73,.07);
+            color: var(--red);
+            font-size: 19px;
+        }
+
+        .admission-info-card strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 15px;
+        }
+
+        .admission-info-card span {
+            color: var(--grey);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           APPLICATION JOURNEY
+        ========================================================= */
+
+        .admission-process {
+            padding: 110px 25px;
+            background: #fff;
+        }
+
+        .process-header {
+            max-width: 700px;
+            margin-bottom: 65px;
+        }
+
+        .process-header p {
+            margin: 22px 0 0;
+            color: var(--grey);
+            line-height: 1.8;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .process-card {
+            position: relative;
+            min-height: 270px;
+            padding: 34px 28px;
+            border-right: 1px solid var(--line);
+            transition: .3s ease;
+        }
+
+        .process-card:last-child {
+            border-right: none;
+        }
+
+        .process-card:hover {
+            background: var(--cream);
+        }
+
+        .process-number {
+            margin-bottom: 55px;
+            color: var(--gold);
+            font-family: "Manrope", sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: .12em;
+        }
+
+        .process-card h3 {
+            margin: 0 0 12px;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 22px;
+            letter-spacing: -.025em;
+        }
+
+        .process-card p {
+            margin: 0;
+            color: var(--grey);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        /* =========================================================
+           PREPARE SECTION
+        ========================================================= */
+
+        .prepare-section {
+            padding: 110px 25px;
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .prepare-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .prepare-copy .section-label {
+            color: var(--gold);
+        }
+
+        .prepare-copy .section-heading {
+            color: #fff;
+        }
+
+        .prepare-copy > p {
+            margin: 25px 0 0;
+            max-width: 510px;
+            color: rgba(255,255,255,.72);
+            line-height: 1.85;
+        }
+
+        .document-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .document-card {
+            min-height: 150px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,.14);
+            background: rgba(255,255,255,.045);
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .document-card:hover {
+            background: rgba(255,255,255,.09);
+            border-color: rgba(211,173,76,.65);
+            transform: translateY(-3px);
+        }
+
+        .document-icon {
+            margin-bottom: 24px;
+            color: var(--gold);
+            font-size: 20px;
+        }
+
+        .document-card h3 {
+            margin: 0 0 7px;
+            font-family: "Manrope", sans-serif;
+            font-size: 15px;
+        }
+
+        .document-card p {
+            margin: 0;
+            color: rgba(255,255,255,.58);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           CHECKLIST
+        ========================================================= */
+
+        .checklist-section {
+            padding: 110px 25px;
+            background: var(--cream);
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .checklist-copy p {
+            max-width: 520px;
+            margin: 22px 0 0;
+            color: var(--grey);
+            line-height: 1.85;
+        }
+
+        .checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 23px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .check-item i {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: #fff;
+            font-size: 11px;
+        }
+
+        .check-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .check-item span {
+            display: block;
+            color: var(--grey);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           APPLICATION ENQUIRY
+        ========================================================= */
+
+        .enquiry-section {
+            padding: 110px 25px;
+            background: #fff;
+        }
+
+        .enquiry-layout {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .enquiry-copy p {
+            max-width: 470px;
+            margin: 22px 0;
+            color: var(--grey);
+            line-height: 1.85;
+        }
+
+        .contact-note {
+            margin-top: 30px;
+            padding: 22px;
+            border-left: 3px solid var(--gold);
+            background: var(--cream);
+        }
+
+        .contact-note strong {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .contact-note span {
+            color: var(--grey);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .enquiry-form {
+            padding: 40px;
+            background: var(--cream);
+            border: 1px solid var(--line);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 19px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .03em;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid rgba(16,43,73,.17);
+            border-radius: 0;
+            outline: none;
+            padding: 14px 15px;
+            background: #fff;
+            color: var(--black);
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            transition: .2s ease;
+        }
+
+        .form-group textarea {
+            min-height: 135px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--navy);
+            box-shadow: 0 0 0 3px rgba(16,43,73,.06);
+        }
+
+        .field-error {
+            display: none;
+            margin-top: 6px;
+            color: var(--red);
+            font-size: 11px;
+        }
+
+        .form-group.invalid input,
+        .form-group.invalid select,
+        .form-group.invalid textarea {
+            border-color: var(--red);
+        }
+
+        .form-group.invalid .field-error {
+            display: block;
+        }
+
+        .consent-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            margin: 4px 0 24px;
+        }
+
+        .consent-row input {
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            accent-color: var(--navy);
+        }
+
+        .consent-row label {
+            color: var(--grey);
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+        .submit-btn {
+            width: 100%;
+            min-height: 54px;
+            border: none;
+            background: var(--navy);
+            color: #fff;
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: .25s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--red);
+        }
+
+        .form-success {
+            display: none;
+            margin-top: 18px;
+            padding: 17px;
+            background: rgba(39,125,79,.09);
+            border: 1px solid rgba(39,125,79,.18);
+            color: #276f49;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        /* =========================================================
+           FAQ
+        ========================================================= */
+
+        .faq-section {
+            padding: 110px 25px;
+            background: var(--cream);
+        }
+
+        .faq-header {
+            max-width: 650px;
+            margin-bottom: 55px;
+        }
+
+        .faq-header p {
+            margin: 20px 0 0;
+            color: var(--grey);
+            line-height: 1.8;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            border-top: 1px solid var(--line);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 25px 0;
+            border: none;
+            background: transparent;
+            color: var(--navy);
+            text-align: left;
+            font-family: "Manrope", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .faq-question i {
+            transition: transform .3s ease;
+            color: var(--red);
+            font-size: 13px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .3s ease;
+        }
+
+        .faq-answer-inner {
+            overflow: hidden;
+        }
+
+        .faq-answer p {
+            max-width: 760px;
+            margin: 0;
+            padding: 0 40px 25px 0;
+            color: var(--grey);
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .faq-item.active .faq-answer {
+            grid-template-rows: 1fr;
+        }
+
+        /* =========================================================
+           FINAL CTA
+        ========================================================= */
+
+        .admission-cta {
+            position: relative;
+            padding: 105px 25px;
+            background:
+                linear-gradient(
+                    105deg,
+                    rgba(16,43,73,.98),
+                    rgba(31,85,149,.92)
+                );
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .admission-cta::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            right: -160px;
+            top: -190px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            width: min(1180px, 100%);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .cta-content h2 {
+            max-width: 650px;
+            margin: 0;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(32px, 4vw, 52px);
+            line-height: 1.08;
+            letter-spacing: -.04em;
+        }
+
+        .cta-content p {
+            max-width: 580px;
+            margin: 16px 0 0;
+            color: rgba(255,255,255,.7);
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 54px;
+            padding: 0 25px;
+            background: #fff;
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            transition: .25s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--gold);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           DOCUMENT MODAL
+        ========================================================= */
+
+        .document-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            background: rgba(5,18,31,.72);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: .25s ease;
+        }
+
+        .document-modal.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .document-modal-box {
+            position: relative;
+            width: min(500px, 100%);
+            padding: 42px;
+            background: #fff;
+            transform: translateY(20px);
+            transition: .3s ease;
+        }
+
+        .document-modal.active .document-modal-box {
+            transform: translateY(0);
+        }
+
+        .document-modal-close {
+            position: absolute;
+            top: 17px;
+            right: 18px;
+            width: 35px;
+            height: 35px;
+            border: none;
+            background: transparent;
+            color: var(--navy);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .modal-icon {
+            margin-bottom: 20px;
+            color: var(--red);
+            font-size: 27px;
+        }
+
+        .document-modal-box h3 {
+            margin: 0 0 12px;
+            color: var(--navy);
+            font-family: "Manrope", sans-serif;
+            font-size: 25px;
+        }
+
+        .document-modal-box p {
+            margin: 0;
+            color: var(--grey);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        .back-to-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 45px;
+            height: 45px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #111;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition:
+                opacity .3s ease,
+                visibility .3s ease,
+                transform .3s ease,
+                color .3s ease;
+            z-index: 99999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            color: #777;
+            transform: translateY(-5px);
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .admission-intro-grid,
+            .prepare-grid,
+            .checklist-grid,
+            .enquiry-layout {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-card:nth-child(2) {
+                border-right: none;
+            }
+
+            .process-card:nth-child(-n+2) {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .cta-content {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .admission-hero {
+                min-height: 620px;
+            }
+
+            .admission-hero-content {
+                width: min(100% - 35px, 1180px);
+                padding: 135px 0 60px;
+            }
+
+            .admission-hero h1 {
+                font-size: clamp(44px, 13vw, 68px);
+            }
+
+            .admission-hero-text {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .admission-intro,
+            .admission-process,
+            .prepare-section,
+            .checklist-section,
+            .enquiry-section,
+            .faq-section {
+                padding: 75px 20px;
+            }
+
+            .admission-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .admission-info-card {
+                min-height: auto;
+                padding: 24px 20px;
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .admission-info-card:last-child {
+                border-bottom: none;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-card {
+                min-height: auto;
+                border-right: none !important;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .process-card:last-child {
+                border-bottom: none;
+            }
+
+            .process-number {
+                margin-bottom: 30px;
+            }
+
+            .document-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .enquiry-form {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .faq-question {
+                font-size: 14px;
+                padding: 21px 0;
+            }
+
+            .faq-answer p {
+                padding-right: 15px;
+            }
+
+            .admission-cta {
+                padding: 75px 20px;
+            }
+
+            .cta-content {
+                gap: 30px;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .document-modal-box {
+                padding: 35px 25px;
+            }
+
+            .back-to-top {
+                right: 15px;
+                bottom: 18px;
+                font-size: 28px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="site-header">
+
+    <div class="nav-container">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Laerskool LindoPark logo"
+            >
+
+            <div class="brand-name">
+
+                <span>LAERSKOOL</span>
+
+                <strong>LINDOPARK</strong>
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a
+                href="sport-culture.html"
+                class="active"
+            >
+                Sport & Culture
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE SIDEBAR
+===================================================== -->
+
+<div
+    class="mobile-overlay"
+    id="mobileOverlay"
+></div>
+
+
+<aside
+    class="mobile-sidebar"
+    id="mobileSidebar"
+    aria-hidden="true"
+>
+
+    <div class="sidebar-header">
+
+        <a href="index.html">
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lindopark"
+            >
+
+        </a>
+
+        <button
+            class="sidebar-close"
+            id="sidebarClose"
+            aria-label="Close navigation"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="sidebar-links">
+
+        <a href="index.html">
+            <span>01</span>
+            Home
+        </a>
+
+        <a href="about.html">
+            <span>02</span>
+            About
+        </a>
+
+        <a href="academics.html">
+            <span>03</span>
+            Academics
+        </a>
+
+        <a
+            href="sport-culture.html"
+            class="active"
+        >
+            <span>04</span>
+            Sport & Culture
+        </a>
+
+        <a href="news.html">
+            <span>05</span>
+            News
+        </a>
+
+        <a href="admissions.html">
+            <span>06</span>
+            Admissions
+        </a>
+
+        <a href="contact.html">
+            <span>07</span>
+            Contact
+        </a>
+
+    </div>
+
+
+    <div class="sidebar-footer">
+
+        <span>
+            SAAM GROEI ONS
+        </span>
+
+        <strong>
+            OPWAARTS.
+        </strong>
+
+    </div>
+
+</aside>
+
+
+
+<main>
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <main>
+
+        <section class="admission-hero">
+
+            <div class="admission-hero-image"></div>
+
+            <div class="admission-hero-content">
+
+                <div class="admission-eyebrow">
+                    Admissions
+                </div>
+
+                <h1>
+                    Begin the journey
+                    <span>with us.</span>
+                </h1>
+
+                <p class="admission-hero-text">
+                    Choosing a school is an important decision.
+                    Explore the admission journey at Laerskool
+                    LindoPark and find the information you need
+                    before making an enquiry.
+                </p>
+
+                <div class="admission-hero-actions">
+
+                    <a
+                        href="#enquiry"
+                        class="admission-btn admission-btn-primary"
+                    >
+                        Make an Enquiry
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+
+                    <a
+                        href="#process"
+                        class="admission-btn admission-btn-outline"
+                    >
+                        Explore the Process
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             QUICK INFO
+        ====================================================== -->
+
+        <section class="admission-info-strip">
+
+            <div class="admission-container admission-info-grid">
+
+                <div class="admission-info-card">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            School Enquiries
+                        </strong>
+
+                        <span>
+                            Contact the school directly for
+                            current admission information.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admission-info-card">
+
+                    <div class="info-icon">
+                        <i class="fa-regular fa-folder-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Prepare Your Documents
+                        </strong>
+
+                        <span>
+                            Keep commonly requested learner
+                            and parent documents ready.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admission-info-card">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Ask Questions
+                        </strong>
+
+                        <span>
+                            Not sure about something?
+                            Reach out before submitting.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRO
+        ====================================================== -->
+
+        <section class="admission-intro">
+
+            <div class="admission-container admission-intro-grid">
+
+                <div>
+
+                    <p class="section-label">
+                        Welcome
+                    </p>
+
+                    <h2 class="section-heading">
+                        A school journey
+                        starts with a
+                        conversation.
+                    </h2>
+
+                </div>
+
+                <div class="admission-intro-copy">
+
+                    <p>
+                        At Laerskool LindoPark, the admission
+                        journey is an opportunity for families
+                        to learn more about the school, understand
+                        what is required and ask the questions
+                        that matter.
+                    </p>
+
+                    <p>
+                        This page provides a simple guide to help
+                        you prepare. Admission requirements,
+                        available places, application dates,
+                        fees and supporting documentation can
+                        change, so families should confirm the
+                        latest official information directly
+                        with the school.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Welkom by Laerskool LindoPark.
+                        </strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROCESS
+        ====================================================== -->
+
+        <section
+            class="admission-process"
+            id="process"
+        >
+
+            <div class="admission-container">
+
+                <div class="process-header">
+
+                    <p class="section-label">
+                        The Journey
+                    </p>
+
+                    <h2 class="section-heading">
+                        Four simple steps
+                        to get started.
+                    </h2>
+
+                    <p>
+                        Use this as a website guide when preparing
+                        your enquiry. The school's official
+                        admission process and requirements should
+                        always be confirmed with the school.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <article class="process-card">
+
+                        <div class="process-number">
+                            01 / EXPLORE
+                        </div>
+
+                        <h3>
+                            Discover the School
+                        </h3>
+
+                        <p>
+                            Learn about our academics, sport,
+                            culture, values and the wider school
+                            experience before making your enquiry.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-card">
+
+                        <div class="process-number">
+                            02 / PREPARE
+                        </div>
+
+                        <h3>
+                            Prepare Your Information
+                        </h3>
+
+                        <p>
+                            Gather the learner and parent or
+                            guardian information that may be
+                            requested during the admission process.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-card">
+
+                        <div class="process-number">
+                            03 / APPLY
+                        </div>
+
+                        <h3>
+                            Submit an Enquiry
+                        </h3>
+
+                        <p>
+                            Contact the school or submit an
+                            enquiry through the available official
+                            application channel.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-card">
+
+                        <div class="process-number">
+                            04 / CONNECT
+                        </div>
+
+                        <h3>
+                            Continue the Conversation
+                        </h3>
+
+                        <p>
+                            Follow the school's instructions,
+                            provide any additional information and
+                            keep communication details available.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DOCUMENTS
+        ====================================================== -->
+
+        <div class="document-grid">
+
+    <a
+        class="document-card"
+        href="assets/documents/application-form.pdf"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="document-icon">
+            <i class="fa-solid fa-file-pdf"></i>
+        </div>
+
+        <h3>Application Form</h3>
+
+        <p>
+            View or download the application form.
+        </p>
+    </a>
+
+
+    <a
+        class="document-card"
+        href="assets/documents/school-fees.pdf"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="document-icon">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+        </div>
+
+        <h3>School Fees</h3>
+
+        <p>
+            View the current school fee information.
+        </p>
+    </a>
+
+
+    <a
+        class="document-card"
+        href="assets/documents/prospectus.pdf"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="document-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <h3>School Prospectus</h3>
+
+        <p>
+            Discover more about the school.
+        </p>
+    </a>
+
+
+    <a
+        class="document-card"
+        href="assets/documents/requirements.pdf"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="document-icon">
+            <i class="fa-solid fa-list-check"></i>
+        </div>
+
+        <h3>Admission Requirements</h3>
+
+        <p>
+            View the official admission requirements.
+        </p>
+    </a>
+
+</div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CHECKLIST
+        ====================================================== -->
+
+        <section class="checklist-section">
+
+            <div class="admission-container checklist-grid">
+
+                <div class="checklist-copy">
+
+                    <p class="section-label">
+                        Before You Apply
+                    </p>
+
+                    <h2 class="section-heading">
+                        A little preparation
+                        goes a long way.
+                    </h2>
+
+                    <p>
+                        Before contacting the school, take a
+                        moment to make sure you have the basic
+                        information needed to start the
+                        conversation.
+                    </p>
+
+                </div>
+
+
+                <div class="checklist">
+
+                    <div class="check-item">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <div>
+                            <strong>
+                                Know the grade
+                            </strong>
+
+                            <span>
+                                Be clear about the grade for which
+                                the learner is enquiring.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="check-item">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <div>
+                            <strong>
+                                Have contact details ready
+                            </strong>
+
+                            <span>
+                                Make sure your phone number and
+                                email address are current.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="check-item">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <div>
+                            <strong>
+                                Prepare your questions
+                            </strong>
+
+                            <span>
+                                Write down anything you would like
+                                the school to clarify.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="check-item">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <div>
+                            <strong>
+                                Confirm official requirements
+                            </strong>
+
+                            <span>
+                                Requirements and dates should be
+                                confirmed with the school before
+                                submitting documentation.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="check-item">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <div>
+                            <strong>
+                                Keep copies of submissions
+                            </strong>
+
+                            <span>
+                                Keep a record of information and
+                                documents you submit.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ENQUIRY FORM
+        ====================================================== -->
+
+        <section
+            class="enquiry-section"
+            id="enquiry"
+        >
+
+            <div class="admission-container enquiry-layout">
+
+                <div class="enquiry-copy">
+
+                    <p class="section-label">
+                        Get In Touch
+                    </p>
+
+                    <h2 class="section-heading">
+                        Start your
+                        enquiry.
+                    </h2>
+
+                    <p>
+                        Have a question about admissions?
+                        Complete the form and use it as a starting
+                        point for your conversation with the school.
+                    </p>
+
+                    <div class="contact-note">
+
+                        <strong>
+                            Important
+                        </strong>
+
+                        <span>
+                            For official admission requirements,
+                            application dates, fees and available
+                            places, please confirm the information
+                            directly with the school.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                  <!-- =================================================
+                         REAL FORM
+                    ================================================== -->
+
+                    <form
+                        class="enquiry-form"
+                        id="admissionForm"
+                        action="https://formsubmit.co/lindiesprimary@gmail.com"
+                        method="POST"
+                    >
+
+                        <!--
+                            FORM SUBMISSION SETTINGS
+                        -->
+
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Admission Enquiry - Laerskool LindoPark"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="_template"
+                            value="table"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="_captcha"
+                            value="true"
+                        >
+
+                        <!--
+                            After submission FormSubmit can redirect
+                            the visitor back to the admissions page.
+                        -->
+
+                        <input
+                            type="hidden"
+                            name="_next"
+                            value="https://lindopark.co.za/admissions.html?sent=1"
+                        >
+
+
+                        <!-- HONEYPOT SPAM PROTECTION -->
+
+                        <input
+                            type="text"
+                            name="_honey"
+                            tabindex="-1"
+                            autocomplete="off"
+                            style="
+                                position:absolute;
+                                left:-9999px;
+                                width:1px;
+                                height:1px;
+                                opacity:0;
+                            "
+                        >
+
+
+                        <!-- NAME -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="parentName">
+                                    Parent / Guardian Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="parentName"
+                                    name="Parent / Guardian Name"
+                                    placeholder="Full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="learnerName">
+                                    Learner Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="learnerName"
+                                    name="Learner Name"
+                                    placeholder="Learner's full name"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- GRADE / PHONE -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="grade">
+                                    Grade Applying For *
+                                </label>
+
+                                <select
+                                    id="grade"
+                                    name="Grade Applying For"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select grade
+                                    </option>
+
+                                    <option value="Grade R">
+                                        Grade R
+                                    </option>
+
+                                    <option value="Grade 1">
+                                        Grade 1
+                                    </option>
+
+                                    <option value="Grade 2">
+                                        Grade 2
+                                    </option>
+
+                                    <option value="Grade 3">
+                                        Grade 3
+                                    </option>
+
+                                    <option value="Grade 4">
+                                        Grade 4
+                                    </option>
+
+                                    <option value="Grade 5">
+                                        Grade 5
+                                    </option>
+
+                                    <option value="Grade 6">
+                                        Grade 6
+                                    </option>
+
+                                    <option value="Grade 7">
+                                        Grade 7
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="Phone Number"
+                                    placeholder="e.g. 082 123 4567"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="Email Address"
+                                placeholder="your@email.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Your Enquiry *
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="Enquiry"
+                                placeholder="Tell us how we can help..."
+                                minlength="10"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- CONSENT -->
+
+                        <label class="consent-row">
+
+                            <input
+                                type="checkbox"
+                                id="consent"
+                                name="Consent"
+                                value="I confirm that the information supplied is accurate."
+                                required
+                            >
+
+                            <span>
+                                I confirm that the information supplied
+                                is accurate and that I am contacting the
+                                school regarding an admission enquiry.
+                            </span>
+
+                        </label>
+
+
+                        <!-- SUCCESS MESSAGE -->
+
+                        <div
+                            class="form-success"
+                            id="formSuccess"
+                            role="status"
+                            aria-live="polite"
+                        >
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="submit-btn"
+                            id="submitBtn"
+                        >
+
+                            <span id="submitText">
+                                Send Enquiry
+                            </span>
+
+                            <i
+                                class="fa-solid fa-paper-plane"
+                                id="submitIcon"
+                            ></i>
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="faq-section">
+
+            <div class="admission-container">
+
+                <div class="faq-header">
+
+                    <p class="section-label">
+                        Frequently Asked Questions
+                    </p>
+
+                    <h2 class="section-heading">
+                        Questions families
+                        often ask.
+                    </h2>
+
+
+                </div>
+
+                <div class="faq-list">
+
+                    <article class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Where is Laerskool LindoPark located?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <p>
+                                    The school is located at
+                                    24 Carnation Street, Lindopark,
+                                    Pretoria.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                How can I contact the school?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <p>
+                                    You can contact the school on
+                                    012 800 1608 or email
+                                    lindiesprimary@gmail.com.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Can I submit an admission enquiry online?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <p>
+                                    Yes. The enquiry form on this page
+                                    sends the submitted information to
+                                    the school's published email contact.
+                                    An enquiry is not the same as an
+                                    official admission application.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Are Grade R applications currently open?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <p>
+                                    The school's public 2026 information
+                                    announced Grade R applications for
+                                    2027 from 21 July to 28 August 2026,
+                                    with applications accepted at the
+                                    school and not online. Because those
+                                    dates have now passed, contact the
+                                    school directly for the current
+                                    position and any subsequent admission
+                                    opportunities.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                What documents should I prepare?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <p>
+                                    The school's published admissions
+                                    information has listed items such as
+                                    learner identification, parent IDs,
+                                    proof of residence, vaccination
+                                    records and previous school records
+                                    where applicable. Confirm the current
+                                    official requirements with the school
+                                    before submitting anything.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="admission-cta">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <h2>
+                        Ready to take the
+                        next step?
+                    </h2>
+
+                    <p>
+                        Learn more about Laerskool LindoPark,
+                        connect with the school and begin your
+                        admission conversation.
+                    </p>
+
+                </div>
+
+                <a
+                    href="contact.html"
+                    class="cta-button"
+                >
+                    Contact the School
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+ <footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lindopark"
+            >
+
+            <p>
+
+                More than a school.
+                <br>
+
+                <strong>
+                    'n Gemeenskap.
+                </strong>
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span class="footer-title">
+                EXPLORE
+            </span>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a href="sport-culture.html">
+                Sport & Culture
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <span class="footer-title">
+                INFORMATION
+            </span>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <span class="footer-title">
+                FIND US
+            </span>
+
+            <p>
+
+                24 Carnation Street
+                <br>
+
+                Lindopark
+                <br>
+
+                Pretoria
+
+            </p>
+
+            <a href="tel:0128001608">
+                012 800 1608
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2026 Laerskool LindoPark
+        </span>
+
+        <strong>
+            OPWAARTS.
+        </strong>
+
+    </div>
+
+</footer>
+
+
+
+    <!-- =========================================================
+         DOCUMENT MODAL
+    ========================================================= -->
+
+    <div
+        class="document-modal"
+        id="documentModal"
+        aria-hidden="true"
+    >
+
+        <div class="document-modal-box">
+
+            <button
+                class="document-modal-close"
+                id="documentModalClose"
+                type="button"
+                aria-label="Close"
+            >
+                &times;
+            </button>
+
+            <div class="modal-icon">
+                <i class="fa-regular fa-file-lines"></i>
+            </div>
+
+            <h3 id="modalTitle">
+                Document
+            </h3>
+
+            <p id="modalText">
+                The official document has not yet been uploaded
+                to this website. Add the school's approved PDF
+                or document link here once it is available.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================= -->
+
+    <button
+        id="backToTop"
+        class="back-to-top"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* =====================================================
+               MOBILE MENU
+            ====================================================== */
+
+            const menuToggle =
+                document.getElementById("menuToggle");
+
+            const mobileSidebar =
+                document.getElementById("mobileSidebar");
+
+            const mobileOverlay =
+                document.getElementById("mobileOverlay");
+
+            const sidebarClose =
+                document.getElementById("sidebarClose");
+
+
+            function openMenu() {
+
+                mobileSidebar?.classList.add("active");
+
+                mobileOverlay?.classList.add("active");
+
+                menuToggle?.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+
+            function closeMenu() {
+
+                mobileSidebar?.classList.remove("active");
+
+                mobileOverlay?.classList.remove("active");
+
+                menuToggle?.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+
+            menuToggle?.addEventListener(
+                "click",
+                openMenu
+            );
+
+            sidebarClose?.addEventListener(
+                "click",
+                closeMenu
+            );
+
+            mobileOverlay?.addEventListener(
+                "click",
+                closeMenu
+            );
+
+
+            document
+                .querySelectorAll(".sidebar-nav a")
+                .forEach(link => {
+
+                    link.addEventListener(
+                        "click",
+                        closeMenu
+                    );
+
+                });
+
+
+            document.addEventListener(
+                "keydown",
+                event => {
+
+                    if (event.key === "Escape") {
+                        closeMenu();
+                    }
+
+                }
+            );
+
+
+            /* =====================================================
+               FAQ
+            ====================================================== */
+
+            const faqItems =
+                document.querySelectorAll(".faq-item");
+
+
+            faqItems.forEach(item => {
+
+                const button =
+                    item.querySelector(".faq-question");
+
+                button?.addEventListener(
+                    "click",
+                    () => {
+
+                        const isActive =
+                            item.classList.contains("active");
+
+
+                        faqItems.forEach(otherItem => {
+
+                            otherItem.classList.remove(
+                                "active"
+                            );
+
+                            const otherButton =
+                                otherItem.querySelector(
+                                    ".faq-question"
+                                );
+
+                            otherButton?.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        });
+
+
+                        if (!isActive) {
+
+                            item.classList.add(
+                                "active"
+                            );
+
+                            button.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+            /* =====================================================
+               DOCUMENT MODAL
+            ====================================================== */
+
+            const documentModal =
+                document.getElementById(
+                    "documentModal"
+                );
+
+            const documentModalClose =
+                document.getElementById(
+                    "documentModalClose"
+                );
+
+            const modalTitle =
+                document.getElementById(
+                    "modalTitle"
+                );
+
+            const modalText =
+                document.getElementById(
+                    "modalText"
+                );
+
+
+            function closeDocumentModal() {
+
+                documentModal?.classList.remove(
+                    "active"
+                );
+
+                documentModal?.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+            }
+
+
+            document
+                .querySelectorAll(".document-card")
+                .forEach(card => {
+
+                    card.addEventListener(
+                        "click",
+                        () => {
+
+                            const name =
+                                card.dataset.document ||
+                                "Document";
+
+                            modalTitle.textContent =
+                                name;
+
+                            modalText.textContent =
+                                "The official " +
+                                name +
+                                " has not yet been uploaded " +
+                                "to this website. Add the school's " +
+                                "approved PDF or document link here " +
+                                "once it is available.";
+
+                            documentModal.classList.add(
+                                "active"
+                            );
+
+                            documentModal.setAttribute(
+                                "aria-hidden",
+                                "false"
+                            );
+
+                        }
+                    );
+
+                });
+
+
+            documentModalClose?.addEventListener(
+                "click",
+                closeDocumentModal
+            );
+
+
+            documentModal?.addEventListener(
+                "click",
+                event => {
+
+                    if (
+                        event.target === documentModal
+                    ) {
+                        closeDocumentModal();
+                    }
+
+                }
+            );
+
+
+            /* =====================================================
+               ADMISSION FORM
+            ====================================================== */
+
+            const admissionForm =
+                document.getElementById(
+                    "admissionForm"
+                );
+
+            const formSuccess =
+                document.getElementById(
+                    "formSuccess"
+                );
+
+
+            admissionForm?.addEventListener(
+                "submit",
+                event => {
+
+                    event.preventDefault();
+
+
+                    const requiredFields =
+                        admissionForm.querySelectorAll(
+                            "[required]"
+                        );
+
+                    let valid = true;
+
+
+                    requiredFields.forEach(field => {
+
+                        const group =
+                            field.closest(
+                                ".form-group"
+                            );
+
+                        let fieldValid =
+                            field.value.trim() !== "";
+
+
+                        if (
+                            field.type === "email" &&
+                            field.value.trim() !== ""
+                        ) {
+
+                            fieldValid =
+                                /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                                    .test(
+                                        field.value.trim()
+                                    );
+
+                        }
+
+
+                        if (
+                            field.type === "checkbox"
+                        ) {
+
+                            fieldValid =
+                                field.checked;
+
+                        }
+
+
+                        if (group) {
+
+                            group.classList.toggle(
+                                "invalid",
+                                !fieldValid
+                            );
+
+                        }
+
+
+                        if (!fieldValid) {
+                            valid = false;
+                        }
+
+                    });
+
+
+                    if (!valid) {
+
+                        formSuccess.classList.remove(
+                            "show"
+                        );
+
+                        return;
+
+                    }
+
+
+                    const parentName =
+                        document.getElementById(
+                            "parentName"
+                        ).value.trim();
+
+
+                    formSuccess.innerHTML =
+                        "<strong>Enquiry prepared successfully.</strong><br>" +
+                        "Thank you, " +
+                        parentName +
+                        ". Your information has been " +
+                        "validated on this page. To make this " +
+                        "form live, connect it to the school's " +
+                        "approved email or form service.";
+
+
+                    formSuccess.classList.add(
+                        "show"
+                    );
+
+
+                    admissionForm
+                        .querySelectorAll(
+                            "input, select, textarea"
+                        )
+                        .forEach(field => {
+
+                            if (
+                                field.type === "checkbox"
+                            ) {
+                                field.checked = false;
+                            } else {
+                                field.value = "";
+                            }
+
+                        });
+
+
+                    window.scrollTo({
+                        top:
+                            formSuccess.getBoundingClientRect().top +
+                            window.scrollY -
+                            140,
+                        behavior: "smooth"
+                    });
+
+                }
+            );
+
+
+            /* =====================================================
+               REMOVE VALIDATION ERROR WHILE TYPING
+            ====================================================== */
+
+            admissionForm
+                ?.querySelectorAll(
+                    "input, select, textarea"
+                )
+                .forEach(field => {
+
+                    field.addEventListener(
+                        "input",
+                        () => {
+
+                            const group =
+                                field.closest(
+                                    ".form-group"
+                                );
+
+                            group?.classList.remove(
+                                "invalid"
+                            );
+
+                        }
+                    );
+
+                    field.addEventListener(
+                        "change",
+                        () => {
+
+                            const group =
+                                field.closest(
+                                    ".form-group"
+                                );
+
+                            group?.classList.remove(
+                                "invalid"
+                            );
+
+                        }
+                    );
+
+                });
+
+
+            /* =====================================================
+               BACK TO TOP
+            ====================================================== */
+
+            const backToTop =
+                document.getElementById(
+                    "backToTop"
+                );
+
+
+            if (backToTop) {
+
+                window.addEventListener(
+                    "scroll",
+                    () => {
+
+                        if (
+                            window.scrollY > 500
+                        ) {
+
+                            backToTop.classList.add(
+                                "show"
+                            );
+
+                        } else {
+
+                            backToTop.classList.remove(
+                                "show"
+                            );
+
+                        }
+
+                    },
+                    { passive: true }
+                );
+
+
+                backToTop.addEventListener(
+                    "click",
+                    () => {
+
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+
+                    }
+                );
+
+            }
+
+
+            /* =====================================================
+               RESTORE PAGE SCROLL
+            ====================================================== */
+
+            document.documentElement.style.overflowY =
+                "auto";
+
+            document.body.style.overflowY =
+                "auto";
+
+
+            /* =====================================================
+               ACTIVE PAGE SAFETY
+            ====================================================== */
+
+            const currentPage =
+                window.location.pathname
+                    .split("/")
+                    .pop() || "index.html";
+
+
+            document
+                .querySelectorAll(
+                    ".desktop-nav a, .sidebar-nav a"
+                )
+                .forEach(link => {
+
+                    const href =
+                        link.getAttribute("href");
+
+                    if (
+                        href === currentPage
+                    ) {
+
+                        link.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                });
+
+        });
+
+    </script>
+
+</body>
+</html>

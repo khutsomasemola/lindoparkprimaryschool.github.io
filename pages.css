@@ -1,0 +1,555 @@
+/* =====================================================
+   LINDOPARK INNER PAGES
+   ===================================================== */
+
+
+/* ================= PAGE HERO ================= */
+
+.page-hero {
+
+    min-height: 62vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            110deg,
+            rgba(7, 31, 56, 0.98),
+            rgba(32, 84, 154, 0.88)
+        );
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+
+.page-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(213, 179, 77, 0.2);
+
+    border-radius: 50%;
+
+    right: -150px;
+    bottom: -250px;
+
+}
+
+
+.page-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 80px;
+
+    max-width: 850px;
+
+}
+
+
+.page-hero h1 {
+
+    font-size: clamp(48px, 7vw, 86px);
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.page-hero h1 span {
+
+    color: var(--gold);
+
+}
+
+
+.page-hero p {
+
+    max-width: 580px;
+
+    font-size: 18px;
+
+    color: rgba(255,255,255,0.75);
+
+}
+
+
+/* ================= GENERAL PAGE ================= */
+
+.page-section {
+
+    padding: 110px 0;
+
+}
+
+
+/* ================= ABOUT INTRO ================= */
+
+.about-intro {
+
+    background: white;
+
+}
+
+
+.about-intro-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.65fr 1.35fr;
+
+    gap: 80px;
+
+}
+
+
+.about-intro-content {
+
+    max-width: 780px;
+
+}
+
+
+.about-intro-content h2 {
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about-intro-content h2 span {
+
+    color: var(--blue);
+
+}
+
+
+.about-intro-content p {
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ================= VISION ================= */
+
+.vision-section {
+
+    padding: 120px 0;
+
+    background: var(--navy);
+
+    color: white;
+
+}
+
+
+.vision-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.35fr 1.65fr;
+
+    gap: 70px;
+
+}
+
+
+.vision-number {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 80px;
+
+    font-weight: 800;
+
+    color: rgba(213,179,77,0.25);
+
+}
+
+
+.vision-content {
+
+    max-width: 850px;
+
+}
+
+
+.vision-content h2 {
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.vision-content h2 span {
+
+    color: var(--gold);
+
+}
+
+
+.vision-content p {
+
+    max-width: 760px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ================= MISSION ================= */
+
+.mission-section {
+
+    background: var(--off-white);
+
+}
+
+
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+}
+
+
+.mission-content h2 {
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.mission-content h2 span {
+
+    color: var(--blue);
+
+}
+
+
+.mission-content > p {
+
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* Mission points */
+
+.mission-points {
+
+    display: grid;
+
+    gap: 0;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+}
+
+
+.mission-point {
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 15px;
+
+    padding: 28px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.mission-point:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.mission-point > span {
+
+    color: var(--gold);
+
+    font-weight: 800;
+
+}
+
+
+.mission-point strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+
+.mission-point p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+/* ================= VALUES ================= */
+
+.values-section {
+
+    padding: 110px 0;
+
+    background: white;
+
+}
+
+
+.section-heading.centered p {
+
+    max-width: 580px;
+
+    margin: 20px auto 0;
+
+    color: var(--muted);
+
+}
+
+
+.belief-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 60px;
+
+}
+
+
+.belief-card {
+
+    padding: 35px 30px;
+
+    min-height: 300px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: 0.3s ease;
+
+}
+
+
+.belief-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.belief-card > span {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.belief-card h3 {
+
+    font-size: 23px;
+
+    margin: 60px 0 15px;
+
+}
+
+
+.belief-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+/* ================= CTA ================= */
+
+.page-cta {
+
+    padding: 90px 0;
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+
+.page-cta-inner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+
+.page-cta h2 {
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    letter-spacing: -3px;
+
+}
+
+
+.page-cta h2 span {
+
+    color: var(--gold);
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .about-intro-grid,
+    .vision-grid,
+    .mission-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .belief-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .vision-number {
+
+        font-size: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .page-section,
+    .values-section {
+
+        padding: 80px 0;
+
+    }
+
+
+    .page-hero {
+
+        min-height: 70vh;
+
+    }
+
+
+    .page-hero h1 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .belief-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .page-cta-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
