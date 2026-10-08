@@ -4599,7 +4599,7 @@ button {
     position: absolute;
     inset: 0;
     background:
-        url("../assets/images/gallery/creativity.jpg")
+        url("../assets/images/gallery/academic.jpeg")
         center center / cover no-repeat;
     transform: scale(1.03);
     animation: academicHeroZoom 10s ease-out forwards;
