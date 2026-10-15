@@ -822,3 +822,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* ========================================
+   AUTOMATIC ACTIVE DESKTOP NAVIGATION
+======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPage =
+        window.location.pathname.split("/").pop().toLowerCase() ||
+        "index.html";
+
+    document.querySelectorAll(".desktop-nav a[href]").forEach(function (link) {
+        const linkPage = link.getAttribute("href")
+            .split("?")[0]
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+        const isActive = linkPage === currentPage;
+
+        link.classList.toggle("active", isActive);
+
+        if (isActive) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+});

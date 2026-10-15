@@ -1078,7 +1078,7 @@ button {
 
 .experience-academics {
     background-image:
-        url("../assets/images/gallery/creativity.jpg");
+        url("../assets/images/gallery/academic-1.jpeg");
 }
 
 .experience-sport {
@@ -5595,4 +5595,456 @@ button {
         font-size: 42px;
     }
 
+}
+
+/* NEWS CARD MEDIA */
+
+.news-card-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #e8edf2;
+}
+
+.news-card-media img,
+.news-card-media video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-feature-video {
+    background: #102b49;
+}
+
+.news-video-card .news-card-content {
+    padding: 22px;
+}
+
+.news-video-card .news-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+.news-video-card .news-read:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .news-card-media {
+        aspect-ratio: 16 / 10;
+    }
+
+    .news-video-card .news-card-content {
+        padding: 18px;
+    }
+}
+
+/* ==========================================
+   LINDOPARK - DONATE NOW HEADER BUTTON
+========================================== */
+
+.donate-now-btn {
+    position: static;
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 15px;
+    margin-right: 20px;
+
+    background: linear-gradient(135deg, #ff6b9f, #e91e63);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+    white-space: nowrap;
+
+    box-shadow: 0 4px 14px rgba(233, 30, 99, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.donate-now-btn:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(233, 30, 99, 0.32);
+}
+
+.donate-now-btn .donate-heart {
+    color: #ffffff;
+    font-size: 16px;
+    animation: donateHeartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes donateHeartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.2); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.12); }
+    60% { transform: scale(1); }
+}
+
+/* TABLETS */
+@media (max-width: 1100px) {
+    .donate-now-btn {
+        margin-right: 12px;
+        padding: 10px 12px;
+        font-size: 9px;
+    }
+}
+
+/* MOBILE: KEEP THE BUTTON NEXT TO THE LOGO */
+@media (max-width: 768px) {
+    .nav-container {
+        gap: 10px;
+    }
+
+    .donate-now-btn {
+        margin: 0 0 0 auto;
+        padding: 9px 11px;
+        gap: 6px;
+        font-size: 9px;
+        letter-spacing: 0.2px;
+    }
+
+    .donate-now-btn .donate-heart {
+        font-size: 15px;
+    }
+
+    .menu-toggle {
+        flex-shrink: 0;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+    .nav-container {
+        gap: 6px;
+    }
+
+    .donate-now-btn {
+        padding: 8px;
+        font-size: 8px;
+        gap: 5px;
+    }
+
+    .donate-now-btn .donate-heart {
+        font-size: 14px;
+    }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .donate-now-btn .donate-heart {
+        animation: none;
+    }
+
+    .donate-now-btn {
+        transition: none;
+    }
+}
+
+/* ACTIVE PAGE INDICATOR */
+.desktop-nav a.active,
+.mobile-nav a.active {
+    color: var(--pink-dark);
+    font-weight: 800;
+}
+
+.desktop-nav a.active {
+    position: relative;
+}
+
+.desktop-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    height: 3px;
+    background: var(--pink);
+    border-radius: 10px;
+}
+
+.mobile-nav a.active {
+    display: block;
+    background: var(--pink-light);
+    border-left: 3px solid var(--pink);
+    padding-left: 15px;
+}
+
+.donate-now-btn.active {
+    outline: 2px solid var(--pink-dark);
+    outline-offset: 3px;
+}
+
+@media (max-width: 960px) {
+    .desktop-nav a.active::after {
+        display: none;
+    }
+}
+
+/* =====================================================
+   SPORT & CULTURE PAGE ADDITIONS
+===================================================== */
+
+.sc-sports-note {
+    margin-top: 25px;
+    color: #626b75;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.sc-sports-note i {
+    margin-right: 7px;
+    color: #172b49;
+}
+
+.sc-uniform {
+    background: #f5f6f4;
+    overflow: hidden;
+}
+
+.uniform-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 55px;
+    align-items: center;
+}
+
+.uniform-image {
+    position: relative;
+    min-height: 460px;
+    background: #e5e8e5;
+    overflow: hidden;
+}
+
+.uniform-image img {
+    display: block;
+    width: 100%;
+    min-height: 460px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .5s ease;
+}
+
+.uniform-image:hover img {
+    transform: scale(1.025);
+}
+
+.uniform-image img.image-unavailable {
+    visibility: hidden;
+}
+
+.uniform-image:has(img.image-unavailable)::before {
+    content: "Add your uniform photograph";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 25px;
+    color: #172b49;
+    text-align: center;
+    font-weight: 700;
+}
+
+.uniform-image-label {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    padding: 12px 15px;
+    background: #fff;
+    color: #172b49;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.uniform-content h2 {
+    margin: 15px 0 20px;
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.15;
+}
+
+.uniform-content h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.uniform-content > p {
+    color: #626b75;
+    line-height: 1.85;
+}
+
+.uniform-items {
+    margin: 28px 0;
+    border-top: 1px solid #d9dedb;
+}
+
+.uniform-item {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) 26px;
+    gap: 14px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #d9dedb;
+}
+
+.uniform-item-icon {
+    color: #77818a;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.uniform-item h3 {
+    margin: 0 0 6px;
+    color: #172b49;
+    font-size: 16px;
+}
+
+.uniform-item p {
+    margin: 0;
+    color: #626b75;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.uniform-swatch {
+    width: 24px;
+    height: 24px;
+    display: block;
+    border: 1px solid #cdd2d5;
+    border-radius: 50%;
+}
+
+.uniform-swatch.white {
+    background: #fff;
+}
+
+.uniform-swatch.navy {
+    background: #172b49;
+    border-color: #172b49;
+}
+
+.uniform-note {
+    padding: 16px 18px;
+    margin-bottom: 25px;
+    background: #e9ece9;
+    border-left: 3px solid #172b49;
+}
+
+.uniform-note strong {
+    display: block;
+    margin-bottom: 7px;
+    color: #172b49;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+}
+
+.uniform-note p {
+    margin: 0;
+    color: #626b75;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+/* Culture cards can accommodate four activities. */
+.culture-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Mobile navigation support. */
+@media (max-width: 1024px) {
+    .uniform-layout {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .uniform-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .uniform-image,
+    .uniform-image img {
+        min-height: 320px;
+    }
+
+    .uniform-content h2 {
+        font-size: 36px;
+    }
+
+    .culture-side {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .uniform-image,
+    .uniform-image img {
+        min-height: 260px;
+    }
+
+    .uniform-image-label {
+        bottom: 12px;
+        left: 12px;
+        font-size: 9px;
+    }
+
+    .uniform-item {
+        gap: 9px;
+    }
+}
+
+/* Prevent background scrolling when the mobile menu is open. */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* ========================================
+   LINDOPARK DESKTOP ACTIVE NAVIGATION
+======================================== */
+
+@media (min-width: 769px) {
+    .site-header .desktop-nav a {
+        position: relative;
+        transition: color 0.25s ease;
+    }
+
+    .site-header .desktop-nav a.active {
+        color: #d3ad4c;
+        font-weight: 700;
+    }
+
+    .site-header .desktop-nav a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -8px;
+        height: 3px;
+        background-color: #d3ad4c;
+        border-radius: 3px;
+    }
 }

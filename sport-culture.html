@@ -1,636 +1,495 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sport & Culture | Laerskool LindoPark</title>
 
-    <meta
-        name="description"
-        content="Sport and cultural life at Laerskool LindoPark — discovering talent, building confidence and growing together."
-    >
+    <meta name="description"
+          content="Discover sports, cultural activities and school attire at Laerskool LindoPark in Pretoria. Saam groei ons opwaarts.">
+
+    <meta name="theme-color" content="#172b49">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link rel="stylesheet" href="css/style.css">
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 
 <body>
 
-
 <!-- =====================================================
-     NAVIGATION
+     HEADER / NAVIGATION
 ===================================================== -->
 
 <header class="site-header">
-
     <div class="nav-container">
 
-        <a
-            href="index.html"
-            class="brand"
-        >
-
-            <img
-                src="assets/images/logo.png"
-                alt="Laerskool LindoPark logo"
-            >
+        <a href="index.html" class="brand">
+            <img src="assets/images/logo.png"
+                 alt="Laerskool LindoPark logo">
 
             <div class="brand-name">
-
                 <span>LAERSKOOL</span>
-
                 <strong>LINDOPARK</strong>
-
             </div>
-
         </a>
 
+        <a href="donate.html"
+           class="donate-now-btn"
+           aria-label="Donate to Laerskool LindoPark">
+            <i class="fa-solid fa-heart donate-heart"></i>
+            <span>DONATE NOW</span>
+        </a>
 
-        <!-- DESKTOP NAVIGATION -->
-
-        <nav class="desktop-nav">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="academics.html">
-                Academics
-            </a>
-
-            <a
-                href="sport-culture.html"
-                class="active"
-            >
-                Sport & Culture
-            </a>
-
-            <a href="news.html">
-                News
-            </a>
-
-            <a href="admissions.html">
-                Admissions
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="sport-culture.html" class="active"
+               aria-current="page">Sport & Culture</a>
+            <a href="news.html">News</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
-
-        <!-- MOBILE MENU BUTTON -->
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation"
-            aria-expanded="false"
-        >
-
+        <button class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mobileSidebar">
             <span></span>
             <span></span>
             <span></span>
-
         </button>
 
     </div>
-
 </header>
-
 
 
 <!-- =====================================================
      MOBILE SIDEBAR
 ===================================================== -->
 
-<div
-    class="mobile-overlay"
-    id="mobileOverlay"
-></div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
 
-
-<aside
-    class="mobile-sidebar"
-    id="mobileSidebar"
-    aria-hidden="true"
->
+<aside class="mobile-sidebar"
+       id="mobileSidebar"
+       aria-hidden="true"
+       inert>
 
     <div class="sidebar-header">
-
-        <a href="index.html">
-
-            <img
-                src="assets/images/logo.png"
-                alt="Lindopark"
-            >
-
+        <a href="index.html" aria-label="LindoPark home">
+            <img src="assets/images/logo.png" alt="LindoPark logo">
         </a>
 
-        <button
-            class="sidebar-close"
-            id="sidebarClose"
-            aria-label="Close navigation"
-        >
-            ×
+        <button class="sidebar-close"
+                id="sidebarClose"
+                type="button"
+                aria-label="Close navigation">
+            &times;
         </button>
-
     </div>
 
-
-    <div class="sidebar-links">
-
-        <a href="index.html">
-            <span>01</span>
-            Home
-        </a>
-
-        <a href="about.html">
-            <span>02</span>
-            About
-        </a>
-
-        <a href="academics.html">
-            <span>03</span>
-            Academics
-        </a>
-
-        <a
-            href="sport-culture.html"
-            class="active"
-        >
-            <span>04</span>
-            Sport & Culture
-        </a>
-
-        <a href="news.html">
-            <span>05</span>
-            News
-        </a>
-
-        <a href="admissions.html">
-            <span>06</span>
-            Admissions
-        </a>
-
-        <a href="contact.html">
-            <span>07</span>
-            Contact
-        </a>
-
-    </div>
-
+    <nav class="sidebar-links" aria-label="Mobile navigation">
+        <a href="index.html"><span>01</span> Home</a>
+        <a href="about.html"><span>02</span> About</a>
+        <a href="academics.html"><span>03</span> Academics</a>
+        <a href="sport-culture.html" class="active"
+           aria-current="page"><span>04</span> Sport & Culture</a>
+        <a href="news.html"><span>05</span> News</a>
+        <a href="admissions.html"><span>06</span> Admissions</a>
+        <a href="contact.html"><span>07</span> Contact</a>
+        <a href="donate.html"><span>08</span> Donate</a>
+    </nav>
 
     <div class="sidebar-footer">
-
-        <span>
-            SAAM GROEI ONS
-        </span>
-
-        <strong>
-            OPWAARTS.
-        </strong>
-
+        <span>SAAM GROEI ONS</span>
+        <strong>OPWAARTS.</strong>
     </div>
-
 </aside>
-
 
 
 <main>
 
-
 <!-- =====================================================
-     PAGE HERO
+     HERO
 ===================================================== -->
 
 <section class="sc-hero">
 
-    <div
-        class="sc-hero-image"
-        style="background-image:url('assets/images/gallery/gallery-2.jpg')"
-    ></div>
+    <div class="sc-hero-image"
+         style="background-image:url('assets/images/gallery/gallery-2.jpg')">
+    </div>
 
     <div class="sc-hero-overlay"></div>
-
 
     <div class="container sc-hero-content">
 
         <div class="sc-hero-kicker">
-
             <span></span>
-
             SPORT & KULTUUR
-
         </div>
 
-
         <h1>
-
             Discover.
             <br>
-
             <em>Participate.</em>
-
             <br>
-
             Grow.
-
         </h1>
 
-
         <p>
-
-            At LindoPark, life beyond the classroom
-            gives learners space to discover their
-            talents, build confidence and experience
-            the power of belonging.
-
+            At Laerskool LindoPark, learning extends beyond
+            the classroom. Sport and cultural activities
+            help learners discover their talents, develop
+            confidence and build lasting friendships.
         </p>
 
-
         <div class="sc-hero-actions">
-
-            <a
-                href="#sports"
-                class="button button-primary"
-            >
-
-                Explore activities
-
-                <span>↓</span>
-
+            <a href="#sports" class="button button-primary">
+                Explore sports <span>↓</span>
             </a>
 
-            <a
-                href="#culture"
-                class="button button-outline"
-            >
-
+            <a href="#culture" class="button button-outline">
                 Discover culture
-
             </a>
-
         </div>
 
     </div>
 
-
     <div class="sc-hero-bottom">
-
-        <span>
-            04 / 07
-        </span>
-
-        <span>
-            LINDOPARK • PRETORIA
-        </span>
-
+        <span>04 / 07</span>
+        <span>LINDOPARK • PRETORIA</span>
     </div>
 
 </section>
 
 
-
 <!-- =====================================================
-     INTRO
+     INTRODUCTION
 ===================================================== -->
 
 <section class="sc-intro section">
-
     <div class="container sc-intro-grid">
 
-
         <div class="sc-intro-label">
-
-            <span>
-                01
-            </span>
-
+            <span>01</span>
             MORE THAN THE CLASSROOM
-
         </div>
-
 
         <div class="sc-intro-content">
 
-            <span class="section-kicker">
-                DIE LINDOPARK-ERVARING
-            </span>
+            <span class="section-kicker">DIE LINDOPARK-ERVARING</span>
 
             <h2>
-
                 Every learner deserves
-                a place to
-                <em>shine.</em>
-
+                a place to <em>shine.</em>
             </h2>
 
-
             <p>
-
-                Sport and cultural activities form an
-                important part of a learner's school
-                experience. They create opportunities
-                to participate, collaborate, lead and
-                discover new interests.
-
+                Sport and cultural activities form an important
+                part of school life. They give learners
+                opportunities to develop skills, explore
+                interests and discover what they are capable of.
             </p>
 
-
             <p>
-
-                Whether competing on the field,
-                performing on stage or developing
-                a creative talent, learners are
-                encouraged to participate and grow
-                together.
-
+                Through participation, teamwork and creativity,
+                learners learn the importance of respect,
+                perseverance, responsibility and school pride.
             </p>
-
 
         </div>
-
     </div>
-
 </section>
 
 
-
 <!-- =====================================================
-     SPORT SECTION
+     SPORTS OFFERED
 ===================================================== -->
 
-<section
-    class="sc-sports section"
-    id="sports"
->
+<section class="sc-sports section" id="sports">
 
     <div class="container">
 
-
         <div class="section-top sc-section-heading">
-
             <div>
-
-                <span class="section-kicker">
-                    SPORT
-                </span>
-
+                <span class="section-kicker">SPORT</span>
                 <h2>
-
-                    Stronger
-                    <em>together.</em>
-
+                    Stronger <em>together.</em>
                 </h2>
-
             </div>
 
-
             <p>
-
-                Sport creates more than
-                competition. It teaches teamwork,
-                discipline, perseverance and
-                school pride.
-
+                From the sports field to individual challenges,
+                participation helps learners develop discipline,
+                teamwork and a healthy competitive spirit.
             </p>
-
         </div>
-
 
 
         <div class="sport-feature">
 
-
             <div class="sport-feature-image">
-
-                <img
-                    src="assets/images/gallery/sports-1.jpg"
-                    alt="Lindopark learners participating in sport"
-                >
+                <img src="assets/images/gallery/sports-1.jpg"
+                     alt="Learners participating in school sport"
+                     loading="lazy">
 
                 <div class="sport-image-tag">
-                    SPORT • 01
+                    SPORT • LINDOPARK
                 </div>
-
             </div>
-
 
             <div class="sport-feature-content">
 
-                <span class="section-kicker">
-                    ON THE FIELD
-                </span>
+                <span class="section-kicker">ON THE FIELD</span>
 
                 <h3>
-
-                    Find your
-                    <em>strength.</em>
-
+                    Find your <em>strength.</em>
                 </h3>
 
-
                 <p>
-
-                    Participation in sport gives learners
-                    an opportunity to challenge themselves,
-                    work with others and develop confidence
-                    through shared experiences.
-
+                    Every practice and competition is an
+                    opportunity to learn, improve, support
+                    teammates and represent the school with pride.
                 </p>
-
 
                 <div class="sport-values">
 
                     <div>
-
-                        <strong>
-                            01
-                        </strong>
-
-                        <span>
-                            TEAMWORK
-                        </span>
-
+                        <strong>01</strong>
+                        <span>TEAMWORK</span>
                     </div>
 
-
                     <div>
-
-                        <strong>
-                            02
-                        </strong>
-
-                        <span>
-                            DISCIPLINE
-                        </span>
-
+                        <strong>02</strong>
+                        <span>DISCIPLINE</span>
                     </div>
 
-
                     <div>
-
-                        <strong>
-                            03
-                        </strong>
-
-                        <span>
-                            CONFIDENCE
-                        </span>
-
+                        <strong>03</strong>
+                        <span>CONFIDENCE</span>
                     </div>
 
                 </div>
-
             </div>
-
         </div>
 
 
-
-        <!-- SPORT CARDS -->
+        <!-- INDIVIDUAL SPORTS -->
 
         <div class="activity-grid">
 
-
             <article class="activity-card">
-
-                <div class="activity-number">
-                    01
-                </div>
-
-                <div class="activity-icon">
-                    ⚽
-                </div>
+                <div class="activity-number">01</div>
+                <div class="activity-icon" aria-hidden="true">🏃</div>
 
                 <div class="activity-content">
-
-                    <span>
-                        SPORT
-                    </span>
-
-                    <h3>
-                        Team Sport
-                    </h3>
-
+                    <span>TRACK & FIELD</span>
+                    <h3>Athletics</h3>
                     <p>
-                        Learning to communicate,
-                        cooperate and compete
-                        respectfully.
+                        Developing speed, coordination,
+                        endurance and determination.
                     </p>
-
                 </div>
 
-                <div class="activity-arrow">
-                    →
-                </div>
-
+                <div class="activity-arrow" aria-hidden="true">→</div>
             </article>
 
 
-
             <article class="activity-card">
-
-                <div class="activity-number">
-                    02
-                </div>
-
-                <div class="activity-icon">
-                    🏃
-                </div>
+                <div class="activity-number">02</div>
+                <div class="activity-icon" aria-hidden="true">⚽</div>
 
                 <div class="activity-content">
-
-                    <span>
-                        ATHLETICS
-                    </span>
-
-                    <h3>
-                        Movement
-                    </h3>
-
+                    <span>TEAM SPORT</span>
+                    <h3>Soccer</h3>
                     <p>
-                        Developing determination,
-                        energy and a healthy
-                        competitive spirit.
+                        Building ball skills, teamwork,
+                        communication and sportsmanship.
                     </p>
-
                 </div>
 
-                <div class="activity-arrow">
-                    →
-                </div>
-
+                <div class="activity-arrow" aria-hidden="true">→</div>
             </article>
 
 
-
             <article class="activity-card">
-
-                <div class="activity-number">
-                    03
-                </div>
-
-                <div class="activity-icon">
-                    🏅
-                </div>
+                <div class="activity-number">03</div>
+                <div class="activity-icon" aria-hidden="true">🏐</div>
 
                 <div class="activity-content">
+                    <span>TEAM SPORT</span>
+                    <h3>Netball</h3>
+                    <p>
+                        Encouraging agility, coordination,
+                        cooperation and confidence.
+                    </p>
+                </div>
 
-                    <span>
-                        PARTICIPATION
-                    </span>
+                <div class="activity-arrow" aria-hidden="true">→</div>
+            </article>
 
-                    <h3>
-                        School Pride
-                    </h3>
+
+            <article class="activity-card">
+                <div class="activity-number">04</div>
+                <div class="activity-icon" aria-hidden="true">🥎</div>
+
+                <div class="activity-content">
+                    <span>GIRLS' SPORT</span>
+                    <h3>Softball</h3>
+                    <p>
+                        Developing throwing, batting,
+                        fielding and team coordination.
+                    </p>
+                </div>
+
+                <div class="activity-arrow" aria-hidden="true">→</div>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">05</div>
+                <div class="activity-icon" aria-hidden="true">🏅</div>
+
+                <div class="activity-content">
+                    <span>ENDURANCE</span>
+                    <h3>Cross-Country</h3>
+                    <p>
+                        Building stamina, perseverance
+                        and personal determination.
+                    </p>
+                </div>
+
+                <div class="activity-arrow" aria-hidden="true">→</div>
+            </article>
+
+    
+</section>
+
+
+<!-- =====================================================
+     OFFICIAL SPORTS UNIFORM
+===================================================== -->
+
+<section class="sc-uniform section" id="uniform">
+
+    <div class="container">
+
+        <div class="uniform-layout">
+
+            <div class="uniform-image">
+
+                <!--
+                    SAVE YOUR UNIFORM PHOTO AS:
+                    assets/images/uniform/sport-uniform.jpg
+
+                    Change the image path below if needed.
+                -->
+
+                <img
+                    src="assets/images/uniform/uniform.jpeg"
+                    alt="Laerskool LindoPark sports uniform consisting of a white golfer and navy-blue shorts"
+                    loading="lazy">
+
+                <span class="uniform-image-label">
+                    LINDOPARK • SPORTS ATTIRE
+                </span>
+
+            </div>
+
+
+            <div class="uniform-content">
+
+                <span class="section-kicker">
+                    OUR SCHOOL IDENTITY
+                </span>
+
+                <h2>
+                    Wear it with <em>pride.</em>
+                </h2>
+
+                <p>
+                    The prescribed sports attire helps learners
+                    participate comfortably while representing
+                    Laerskool LindoPark with pride.
+                </p>
+
+
+                <div class="uniform-items">
+
+                    <div class="uniform-item">
+
+                        <span class="uniform-item-icon">01</span>
+
+                        <div>
+                            <h3>White Golfer</h3>
+                            <p>
+                                A white golf shirt forming
+                                the top of the sports uniform.
+                            </p>
+                        </div>
+
+                        <span class="uniform-swatch white"
+                              aria-label="White"></span>
+
+                    </div>
+
+
+                    <div class="uniform-item">
+
+                        <span class="uniform-item-icon">02</span>
+
+                        <div>
+                            <h3>Navy-Blue Shorts</h3>
+                            <p>
+                                Navy-blue shorts completing
+                                the school sports outfit.
+                            </p>
+                        </div>
+
+                        <span class="uniform-swatch navy"
+                              aria-label="Navy blue"></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="uniform-note">
+                    <strong>UNIFORM ENQUIRIES</strong>
 
                     <p>
-                        Representing the school with
-                        respect, commitment and pride.
+                        Contact the school to confirm approved
+                        uniform suppliers, sizing and any
+                        additional requirements for specific
+                        sporting activities.
                     </p>
-
                 </div>
 
-                <div class="activity-arrow">
-                    →
-                </div>
 
-            </article>
+                <a href="contact.html" class="button button-primary">
+                    Contact the school <span>→</span>
+                </a>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -638,205 +497,175 @@
 ===================================================== -->
 
 <section class="sc-statement">
-
     <div class="container">
 
-        <span class="section-kicker">
-            MEER AS NET 'N SPEL
-        </span>
+        <span class="section-kicker">MEER AS NET 'N SPEL</span>
 
         <h2>
-
             We play to learn,
             <br>
             <em>we learn to grow.</em>
-
         </h2>
 
     </div>
-
 </section>
 
 
-
 <!-- =====================================================
-     CULTURE
+     CULTURE & ACTIVITIES
 ===================================================== -->
 
-<section
-    class="sc-culture section"
-    id="culture"
->
+<section class="sc-culture section" id="culture">
 
     <div class="container">
-
 
         <div class="section-top sc-section-heading">
 
             <div>
-
-                <span class="section-kicker">
-                    CULTURE
-                </span>
-
+                <span class="section-kicker">CULTURE</span>
                 <h2>
-
-                    Let talent
-                    <em>speak.</em>
-
+                    Let talent <em>speak.</em>
                 </h2>
-
             </div>
 
-
             <p>
-
-                Culture gives learners a space
-                to express themselves, explore
-                creativity and celebrate their
-                individuality.
-
+                Cultural and enrichment activities encourage
+                creativity, curiosity, critical thinking
+                and a lifelong love of learning.
             </p>
 
         </div>
 
 
-
         <div class="culture-layout">
-
 
             <div class="culture-main">
 
-                <img
-                    src="assets/images/gallery/creativity.jpg"
-                    alt="Lindopark cultural activities"
-                >
+                <img src="assets/images/gallery/creativity.jpg"
+                     alt="Learners taking part in cultural and creative activities"
+                     loading="lazy">
 
                 <div class="culture-main-overlay">
-
-                    <span>
-                        CREATIVITY
-                    </span>
+                    <span>CREATIVITY</span>
 
                     <h3>
                         Your voice
                         <br>
                         matters.
                     </h3>
-
                 </div>
 
             </div>
-
 
 
             <div class="culture-side">
 
-
-                <div class="culture-card">
-
-                    <div class="culture-card-top">
-
-                        <span>
-                            01
-                        </span>
-
-                        <strong>
-                            ✦
-                        </strong>
-
-                    </div>
-
-                    <h3>
-                        Performing Arts
-                    </h3>
-
-                    <p>
-                        A space for expression,
-                        confidence and performance.
-                    </p>
-
-                    <span class="culture-card-arrow">
-                        →
-                    </span>
-
-                </div>
-
-
-
-                <div class="culture-card">
+                <article class="culture-card">
 
                     <div class="culture-card-top">
-
-                        <span>
-                            02
-                        </span>
-
-                        <strong>
-                            ✦
-                        </strong>
-
+                        <span>01</span>
+                        <strong aria-hidden="true">♟</strong>
                     </div>
 
-                    <h3>
-                        Creative Expression
-                    </h3>
+                    <h3>Chess</h3>
 
                     <p>
-                        Encouraging imagination,
-                        curiosity and original ideas.
+                        Developing strategic thinking,
+                        patience and problem-solving skills.
                     </p>
 
-                    <span class="culture-card-arrow">
-                        →
-                    </span>
+                    <span class="culture-card-arrow"
+                          aria-hidden="true">→</span>
 
-                </div>
+                </article>
 
 
+                <article class="culture-card">
+
+                    <div class="culture-card-top">
+                        <span>02</span>
+                        <strong aria-hidden="true">✦</strong>
+                    </div>
+
+                    <h3>Public Festival</h3>
+
+                    <p>
+                        Creating opportunities for participation,
+                        talent and creative expression.
+                    </p>
+
+                    <span class="culture-card-arrow"
+                          aria-hidden="true">→</span>
+
+                </article>
+
+
+                <article class="culture-card">
+
+                    <div class="culture-card-top">
+                        <span>03</span>
+                        <strong aria-hidden="true">▤</strong>
+                    </div>
+
+                    <h3>Reading Club</h3>
+
+                    <p>
+                        Encouraging reading, language skills
+                        and a love of books.
+                    </p>
+
+                    <span class="culture-card-arrow"
+                          aria-hidden="true">→</span>
+
+                </article>
+
+
+                <article class="culture-card">
+
+                    <div class="culture-card-top">
+                        <span>04</span>
+                        <strong aria-hidden="true">⚗</strong>
+                    </div>
+
+                    <h3>Science Club</h3>
+
+                    <p>
+                        Inspiring curiosity, scientific thinking
+                        and discovery.
+                    </p>
+
+                    <span class="culture-card-arrow"
+                          aria-hidden="true">→</span>
+
+                </article>
 
             </div>
 
-        </div>
-
-    </div>
-
+     
 </section>
 
 
-
 <!-- =====================================================
-     GALLERY
+     SCHOOL LIFE GALLERY
 ===================================================== -->
 
 <section class="sc-gallery section">
 
     <div class="container">
 
-
         <div class="section-top">
 
             <div>
-
-                <span class="section-kicker">
-                    SKOOLLEWE
-                </span>
+                <span class="section-kicker">SKOOLLEWE</span>
 
                 <h2>
-
-                    Moments that
-                    <em>matter.</em>
-
+                    Moments that <em>matter.</em>
                 </h2>
-
             </div>
 
             <p>
-
-                The memories made outside
-                the classroom become part of
-                the Lindopark journey.
-
+                Every activity, achievement and shared
+                experience contributes to the LindoPark journey.
             </p>
 
         </div>
@@ -846,51 +675,40 @@
 
             <div class="sc-gallery-item large">
 
-                <img
-                    src="assets/images/gallery/sports-2.jpg"
-                    alt="Lindopark sport"
-                >
+                <img src="assets/images/gallery/sports-2.jpg"
+                     alt="Learners participating in sport at LindoPark"
+                     loading="lazy">
 
-                <span>
-                    SPORT
-                </span>
+                <span>SPORT</span>
 
             </div>
 
 
             <div class="sc-gallery-item">
 
-                <img
-                    src="assets/images/gallery/culture-1.jpg"
-                    alt="Lindopark culture"
-                >
+                <img src="assets/images/gallery/culture-1.jpg"
+                     alt="School cultural activities"
+                     loading="lazy">
 
-                <span>
-                    CULTURE
-                </span>
+                <span>CULTURE</span>
 
             </div>
 
 
             <div class="sc-gallery-item">
 
-                <img
-                    src="assets/images/gallery/school life-1.jpg"
-                    alt="Lindopark school life"
-                >
+                <img src="assets/images/gallery/school life-1.jpg"
+                     alt="Everyday life at Laerskool LindoPark"
+                     loading="lazy">
 
-                <span>
-                    SCHOOL LIFE
-                </span>
+                <span>SCHOOL LIFE</span>
 
             </div>
 
         </div>
 
     </div>
-
 </section>
-
 
 
 <!-- =====================================================
@@ -903,15 +721,11 @@
 
         <div class="sc-values-heading">
 
-            <span class="section-kicker">
-                ONS WAARDES
-            </span>
+            <span class="section-kicker">ONS WAARDES</span>
 
             <h2>
-
                 What we build
                 <em>through participation.</em>
-
             </h2>
 
         </div>
@@ -919,154 +733,90 @@
 
         <div class="sc-values-grid">
 
-
             <div class="sc-value">
-
-                <span>
-                    01
-                </span>
-
-                <h3>
-                    Confidence
-                </h3>
-
+                <span>01</span>
+                <h3>Confidence</h3>
                 <p>
-                    Creating opportunities for learners
-                    to discover what they can do.
+                    Giving learners opportunities to develop
+                    skills and recognise their potential.
                 </p>
-
             </div>
 
 
             <div class="sc-value">
-
-                <span>
-                    02
-                </span>
-
-                <h3>
-                    Respect
-                </h3>
-
+                <span>02</span>
+                <h3>Respect</h3>
                 <p>
-                    Learning to value teammates,
-                    opponents and the wider community.
+                    Learning to value teammates, opponents,
+                    teachers and the wider community.
                 </p>
-
             </div>
 
 
             <div class="sc-value">
-
-                <span>
-                    03
-                </span>
-
-                <h3>
-                    Discipline
-                </h3>
-
+                <span>03</span>
+                <h3>Discipline</h3>
                 <p>
-                    Understanding that growth comes
-                    through commitment and consistency.
+                    Developing responsibility, commitment
+                    and consistency.
                 </p>
-
             </div>
 
 
             <div class="sc-value">
-
-                <span>
-                    04
-                </span>
-
-                <h3>
-                    Belonging
-                </h3>
-
+                <span>04</span>
+                <h3>Belonging</h3>
                 <p>
                     Building friendships and creating
                     memories as part of a community.
                 </p>
-
             </div>
-
 
         </div>
 
     </div>
-
 </section>
 
 
-
 <!-- =====================================================
-     CTA
+     ADMISSIONS CTA
 ===================================================== -->
 
 <section class="sc-cta">
 
     <div class="container sc-cta-content">
 
-        <span class="section-kicker">
-            SAAM GROEI ONS
-        </span>
+        <span class="section-kicker">SAAM GROEI ONS</span>
 
         <h2>
-
             There is a place
             <br>
             <em>for every gift.</em>
-
         </h2>
 
         <p>
-
-            Discover the wider Lindopark experience
-            and see how your child can grow,
-            participate and thrive.
-
+            Discover the LindoPark experience and learn
+            more about helping your child participate,
+            grow and thrive.
         </p>
 
 
         <div class="sc-cta-buttons">
 
-            <a
-                href="admissions.html"
-                class="button button-light"
-            >
-
-                Explore Admissions
-
-                <span>
-                    →
-                </span>
-
+            <a href="admissions.html" class="button button-light">
+                Explore Admissions <span>→</span>
             </a>
 
-
-            <a
-                href="contact.html"
-                class="sc-text-button"
-            >
-
-                Contact the school
-
-                <span>
-                    →
-                </span>
-
+            <a href="contact.html" class="sc-text-button">
+                Contact the school <span>→</span>
             </a>
 
         </div>
 
     </div>
-
 </section>
 
-
 </main>
-
 
 
 <!-- =====================================================
@@ -1077,92 +827,52 @@
 
     <div class="container footer-grid">
 
-
         <div class="footer-brand">
 
-            <img
-                src="assets/images/logo.png"
-                alt="Lindopark"
-            >
+            <img src="assets/images/logo.png"
+                 alt="Laerskool LindoPark logo"
+                 loading="lazy">
 
             <p>
-
                 More than a school.
                 <br>
-
-                <strong>
-                    'n Gemeenskap.
-                </strong>
-
+                <strong>'n Gemeenskap.</strong>
             </p>
 
         </div>
 
 
         <div>
+            <span class="footer-title">EXPLORE</span>
 
-            <span class="footer-title">
-                EXPLORE
-            </span>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="academics.html">
-                Academics
-            </a>
-
-            <a href="sport-culture.html">
-                Sport & Culture
-            </a>
-
-            <a href="news.html">
-                News
-            </a>
-
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="sport-culture.html">Sport & Culture</a>
+            <a href="news.html">News</a>
         </div>
 
 
         <div>
+            <span class="footer-title">INFORMATION</span>
 
-            <span class="footer-title">
-                INFORMATION
-            </span>
-
-            <a href="admissions.html">
-                Admissions
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
+            <a href="admissions.html">Admissions</a>
+            <a href="contact.html">Contact</a>
+            <a href="donate.html">Donate</a>
         </div>
 
 
         <div>
-
-            <span class="footer-title">
-                FIND US
-            </span>
+            <span class="footer-title">FIND US</span>
 
             <p>
-
                 24 Carnation Street
                 <br>
-
                 Lindopark
                 <br>
-
                 Pretoria
-
             </p>
 
-            <a href="tel:0128001608">
-                012 800 1608
-            </a>
-
+            <a href="tel:0128001608">012 800 1608</a>
         </div>
 
     </div>
@@ -1170,34 +880,151 @@
 
     <div class="container footer-bottom">
 
-        <span>
-            © 2026 Laerskool LindoPark
-        </span>
+        <span>© <span id="currentYear">2026</span> Laerskool LindoPark</span>
 
-        <strong>
-            OPWAARTS.
-        </strong>
+        <strong>OPWAARTS.</strong>
 
     </div>
 
 </footer>
 
 
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
 
-<!-- BACK TO TOP -->
-
-<button
-    id="backToTop"
-    class="back-to-top"
-    aria-label="Back to top"
->
+<button id="backToTop"
+        class="back-to-top"
+        type="button"
+        aria-label="Back to top">
     ↑
 </button>
 
 
+<!-- =====================================================
+     PAGE SCRIPTS
+===================================================== -->
+
 <script src="js/script.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Keep the copyright year current.
+    const yearElement = document.getElementById("currentYear");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    // Mobile navigation.
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.getElementById("mobileSidebar");
+    const overlay = document.getElementById("mobileOverlay");
+    const closeButton = document.getElementById("sidebarClose");
+
+    function openMenu() {
+        if (!sidebar || !overlay || !menuToggle) return;
+
+        sidebar.classList.add("active");
+        overlay.classList.add("active");
+        document.body.classList.add("menu-open");
+
+        sidebar.removeAttribute("inert");
+        sidebar.setAttribute("aria-hidden", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation");
+
+        if (closeButton) closeButton.focus();
+    }
+
+    function closeMenu(returnFocus = false) {
+        if (!sidebar || !overlay || !menuToggle) return;
+
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+
+        sidebar.setAttribute("aria-hidden", "true");
+        sidebar.setAttribute("inert", "");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+
+        if (returnFocus) menuToggle.focus();
+    }
+
+    if (menuToggle && sidebar && overlay) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        if (closeButton) {
+            closeButton.addEventListener("click", function () {
+                closeMenu(true);
+            });
+        }
+
+        overlay.addEventListener("click", function () {
+            closeMenu(true);
+        });
+
+        sidebar.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                closeMenu();
+            });
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" &&
+                menuToggle.getAttribute("aria-expanded") === "true") {
+                closeMenu(true);
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 1024) {
+                closeMenu();
+            }
+        });
+    }
+
+    // Back-to-top button.
+    const backToTop = document.getElementById("backToTop");
+
+    if (backToTop) {
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        function updateBackToTop() {
+            backToTop.classList.toggle("visible", window.scrollY > 400);
+        }
+
+        window.addEventListener("scroll", updateBackToTop, {
+            passive: true
+        });
+
+        updateBackToTop();
+    }
+
+    // Give missing images a useful fallback instead of a broken-image icon.
+    document.querySelectorAll("img").forEach(function (img) {
+        img.addEventListener("error", function () {
+            img.classList.add("image-unavailable");
+        });
+    });
+
+});
+</script>
 
 </body>
-
 </html>

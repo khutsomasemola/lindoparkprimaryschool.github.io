@@ -7882,3 +7882,29 @@
     }
 
 }
+/* ========================================
+   LINDOPARK DESKTOP ACTIVE NAVIGATION
+======================================== */
+
+@media (min-width: 769px) {
+    .site-header .desktop-nav a {
+        position: relative;
+        transition: color 0.25s ease;
+    }
+
+    .site-header .desktop-nav a.active {
+        color: #d3ad4c;
+        font-weight: 700;
+    }
+
+    .site-header .desktop-nav a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -8px;
+        height: 3px;
+        background-color: #d3ad4c;
+        border-radius: 3px;
+    }
+}

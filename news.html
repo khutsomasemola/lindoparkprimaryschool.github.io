@@ -1273,18 +1273,14 @@
 <body class="news-page">
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
 
+<!-- NAVIGATION -->
 <header class="site-header">
 
     <div class="nav-container">
 
-        <a
-            href="index.html"
-            class="brand"
-        >
+        <!-- SCHOOL LOGO -->
+        <a href="index.html" class="brand">
 
             <img
                 src="assets/images/logo.png"
@@ -1292,67 +1288,45 @@
             >
 
             <div class="brand-name">
-
                 <span>LAERSKOOL</span>
-
                 <strong>LINDOPARK</strong>
-
             </div>
 
         </a>
 
+        <!-- DONATE NOW: NEXT TO THE LOGO -->
+        <a
+            href="donate.html"
+            class="donate-now-btn"
+            aria-label="Donate now to Laerskool LindoPark"
+        >
+            <i class="fa-solid fa-heart donate-heart"></i>
+            <span>DONATE NOW</span>
+        </a>
 
         <!-- DESKTOP NAVIGATION -->
-
         <nav class="desktop-nav">
 
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="academics.html">
-                Academics
-            </a>
-
-            <a
-                href="sport-culture.html"
-                class="active"
-            >
-                Sport & Culture
-            </a>
-
-            <a href="news.html">
-                News
-            </a>
-
-            <a href="admissions.html">
-                Admissions
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="sport-culture.html">Sport & Culture</a>
+            <a href="news.html">News</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="contact.html">Contact</a>
 
         </nav>
 
-
         <!-- MOBILE MENU BUTTON -->
-
         <button
             class="menu-toggle"
             id="menuToggle"
             aria-label="Open navigation"
             aria-expanded="false"
         >
-
             <span></span>
             <span></span>
             <span></span>
-
         </button>
 
     </div>
@@ -1602,7 +1576,7 @@
 
             <!-- Add the actual school Facebook URL here -->
             <a
-                href="#"
+                href="#https://www.facebook.com/share/1VXzh8piZC/"
                 class="facebook-profile-button"
                 id="facebookProfile"
                 target="_blank"
@@ -1790,54 +1764,53 @@
 
             <!-- NEWS 1 -->
 
-            <article
-                class="news-card"
-                data-category="school"
-                data-title="A new chapter begins"
+           
+<article class="news-card news-video-card">
+
+    <div class="news-card-media">
+
+        <video
+            class="news-feature-video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/images/news/news-1.jpg"
+            aria-label="Laerskool LindoPark school community video"
+        >
+            <source
+                src="assets/video/new-chapter.mp4"
+                type="video/mp4"
             >
 
-                <div class="news-card-image">
+            Your browser does not support video playback.
+        </video>
 
-                    <img
-                        src="assets/hero-1.jpg"
-                        alt="LindoPark school"
-                        loading="lazy"
-                    >
+        <span class="news-category">
+            SCHOOL
+        </span>
 
-                    <span class="news-card-category">
-                        School
-                    </span>
+    </div>
 
-                </div>
+    <div class="news-card-content">
 
+        <span class="news-eyebrow">
+            SCHOOL COMMUNITY
+        </span>
 
-                <div class="news-card-content">
+        <h3>A new chapter begins.</h3>
 
-                    <div class="news-card-date">
-                        School Community
-                    </div>
+        <p>
+            Discover the opportunities, experiences and
+            learning that await our LindoPark learners.
+        </p>
 
-                    <h3>
-                        A new chapter begins.
-                    </h3>
+        <a href="about.html" class="news-read">
+            DISCOVER LINDOPARK →
+        </a>
 
-                    <p>
-                        Discover the opportunities,
-                        experiences and learning that await
-                        our LindoPark learners.
-                    </p>
+    </div>
 
-                    <a
-                        href="about.html"
-                        class="news-read-more"
-                    >
-                        Read More
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </article>
+</article>
 
 
             <!-- NEWS 2 -->
@@ -2006,7 +1979,7 @@
                 <div class="news-card-image">
 
                     <img
-                        src="assets/hero-2.jpg"
+                        src="assets/images/news/news-5.jpg"
                         alt="LindoPark community"
                         loading="lazy"
                     >
@@ -2058,7 +2031,7 @@
                 <div class="news-card-image">
 
                     <img
-                        src="assets/hero-3.jpg"
+                        src="assets/images/news/news-6.png"
                         alt="LindoPark learners"
                         loading="lazy"
                     >
@@ -2975,6 +2948,34 @@
         "load",
         restorePageScroll
     );
+
+/* ========================================
+   AUTOMATIC ACTIVE DESKTOP NAVIGATION
+======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPage =
+        window.location.pathname.split("/").pop().toLowerCase() ||
+        "index.html";
+
+    document.querySelectorAll(".desktop-nav a[href]").forEach(function (link) {
+        const linkPage = link.getAttribute("href")
+            .split("?")[0]
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+        const isActive = linkPage === currentPage;
+
+        link.classList.toggle("active", isActive);
+
+        if (isActive) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+});
 
 </script>
 
